@@ -34,3 +34,6 @@ build/
 
 *.md
 /Junk
+
+# Documentation files
+docs/
