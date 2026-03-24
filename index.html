@@ -38,7 +38,7 @@
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="assets/logo.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
     
     <!-- Stylesheets -->
@@ -80,7 +80,7 @@
                 <div class="spinner-ring"></div>
                 <div class="spinner-ring"></div>
                 <div class="spinner-logo">
-                    <img src="assets/logo.jpg" alt="Abdur Rafay">
+                    <img src="assets/logo.jpg" alt="Abdur Rafay" width="64" height="64" decoding="async" fetchpriority="high">
                 </div>
             </div>
             <div class="loading-text">
@@ -115,7 +115,7 @@
         <nav>
             <div class="logo">
                 <a href="#hero" class="logo-link">
-                    <img src="assets/logo.jpg" alt="Abdur Rafay Logo" class="logo-icon" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
+                    <img src="assets/logo.jpg" alt="Abdur Rafay Logo" class="logo-icon" width="32" height="32" decoding="async" fetchpriority="high" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
                 </a>
                 <span class="logo-text">Abdur Rafay</span>
             </div>
@@ -214,7 +214,7 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="assets/pfp.jpg" alt="Abdur Rafay" class="profile-pic" loading="lazy">
+                    <img src="assets/pfp.jpg" alt="Abdur Rafay" class="profile-pic" loading="lazy" decoding="async" width="300" height="400">
                 </div>
                 <div class="about-text">
                     <h3>Hello! I'm Abdur Rafay</h3>
@@ -334,35 +334,35 @@
                     </div>
                     <div class="skill-items" id="programming-skills">
                         <div class="skill-item">
-                            <img src="assets/python.webp" alt="Python" loading="lazy">
+                            <img src="assets/python.webp" alt="Python" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>Python</h4>
                                 <p>Advanced proficiency in Python for AI/ML, web development, and automation</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/sql-database.webp" alt="SQL" loading="lazy">
+                            <img src="assets/sql-database.webp" alt="SQL" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>SQL</h4>
                                 <p>Database design, queries, and optimization for data management</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/javascript.webp" alt="JavaScript" loading="lazy">
+                            <img src="assets/javascript.webp" alt="JavaScript" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>JavaScript</h4>
                                 <p>Modern JavaScript for interactive web applications and frontend development</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/html5.webp" alt="HTML5" loading="lazy">
+                            <img src="assets/html5.webp" alt="HTML5" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>HTML5</h4>
                                 <p>Semantic markup and modern HTML5 features for web development</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/css.webp" alt="CSS3" loading="lazy">
+                            <img src="assets/css.webp" alt="CSS3" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>CSS3</h4>
                                 <p>Responsive design, animations, and modern CSS features</p>
@@ -378,14 +378,14 @@
                     </div>
                     <div class="skill-items" id="ai-skills">
                         <div class="skill-item">
-                            <img src="assets/tensorflow.webp" alt="TensorFlow" loading="lazy">
+                            <img src="assets/tensorflow.webp" alt="TensorFlow" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>TensorFlow</h4>
                                 <p>Deep learning models, neural networks, and AI application development</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/pytorch.webp" alt="PyTorch" loading="lazy">
+                            <img src="assets/pytorch.webp" alt="PyTorch" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>PyTorch</h4>
                                 <p>Currently learning PyTorch for research and advanced deep learning projects</p>
@@ -401,21 +401,21 @@
                     </div>
                     <div class="skill-items" id="web-skills">
                         <div class="skill-item">
-                            <img src="assets/flask.webp" alt="Flask" loading="lazy">
+                            <img src="assets/flask.webp" alt="Flask" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>Flask</h4>
                                 <p>Lightweight web framework for building scalable backend applications</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/django.webp" alt="Django" loading="lazy">
+                            <img src="assets/django.webp" alt="Django" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>Django</h4>
                                 <p>Full-featured web framework for robust web applications and APIs</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/vite-react.webp" alt="React" loading="lazy">
+                            <img src="assets/vite-react.webp" alt="React" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>Vite React</h4>
                                 <p>Modern React development with Vite for fast and efficient frontend builds</p>
@@ -431,21 +431,21 @@
                     </div>
                     <div class="skill-items" id="tools-skills">
                         <div class="skill-item">
-                            <img src="assets/mysql.webp" alt="MySQL" loading="lazy">
+                            <img src="assets/mysql.webp" alt="MySQL" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>MySQL</h4>
                                 <p>Relational database management, optimization, and complex query design</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/vscode.webp" alt="VS Code" loading="lazy">
+                            <img src="assets/vscode.webp" alt="VS Code" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>VS Code</h4>
                                 <p>Primary development environment with extensive customization and extensions</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/git.webp" alt="Git" loading="lazy">
+                            <img src="assets/git.webp" alt="Git" loading="lazy" decoding="async">
                             <div class="skill-info">
                                 <h4>Git</h4>
                                 <p>Version control, branching strategies, and collaborative development workflows</p>
@@ -746,7 +746,7 @@
             <div class="articles-container">
             <a class="article-card" href="https://medium.com/@abdurrafay432007/my-journey-into-ethical-web-scraping-with-python-️-4b5f8b48de10" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener">
                 <div class="article-image">
-                <img src="assets/article1.png" alt="Web Scraping Ethics" loading="lazy">
+                <img src="assets/article1.png" alt="Web Scraping Ethics" loading="lazy" decoding="async">
                 </div>
                 <div class="article-content">
                 <div class="article-category">Web Scraping</div>
@@ -756,7 +756,7 @@
             </a>
             <a class="article-card" href="https://medium.com/@abdurrafay432007/what-i-learned-about-rag-models-as-an-ai-intern-real-world-lessons-from-a-startup-360890d3c281" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener">
                 <div class="article-image">
-                <img src="assets/article2.png" alt="RAG Models" loading="lazy">
+                <img src="assets/article2.png" alt="RAG Models" loading="lazy" decoding="async">
                 </div>
                 <div class="article-content">
                 <div class="article-category">AI & Machine Learning</div>
@@ -777,7 +777,7 @@
                 <div class="certificate-card">
                     <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" target="_blank" rel="noopener" class="certificate-image-link">
                         <div class="certificate-image">
-                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" alt="Certificate Name" loading="lazy">
+                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" alt="Certificate Name" loading="lazy" decoding="async">
                             <div class="certificate-overlay">
                                 <i class="fas fa-search-plus"></i>
                                 <span>View Certificate</span>
@@ -813,7 +813,7 @@
                 <div class="certificate-card">
                     <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" target="_blank" rel="noopener" class="certificate-image-link">
                         <div class="certificate-image">
-                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" alt="Certificate Name 2" loading="lazy">
+                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" alt="Certificate Name 2" loading="lazy" decoding="async">
                             <div class="certificate-overlay">
                                 <i class="fas fa-search-plus"></i>
                                 <span>View Certificate</span>
@@ -899,8 +899,8 @@
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" aria-label="Upwork">
-                                <img src="assets/upwork-light.png" class="upwork-icon light" alt="Upwork" loading="lazy">
-                                <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="Upwork" loading="lazy">
+                                <img src="assets/upwork-light.png" class="upwork-icon light" alt="Upwork" loading="lazy" decoding="async">
+                                <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="Upwork" loading="lazy" decoding="async">
                             </a>
                         </div>
                     </div>
@@ -943,8 +943,8 @@
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" aria-label="Upwork">
-                        <img src="assets/upwork-light.png" class="upwork-icon light" alt="Upwork" loading="lazy">
-                        <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="Upwork" loading="lazy">
+                        <img src="assets/upwork-light.png" class="upwork-icon light" alt="Upwork" loading="lazy" decoding="async">
+                        <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="Upwork" loading="lazy" decoding="async">
                     </a>
                 </div>
             </div>
