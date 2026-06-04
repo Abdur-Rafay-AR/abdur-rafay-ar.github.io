@@ -818,15 +818,11 @@ section.visible {
 /* About Section */
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-3xl);
     align-items: start;
-}
-
-.about-image {
-    position: relative;
-    display: flex;
-    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .profile-pic {
