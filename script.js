@@ -118,6 +118,55 @@
             sections.forEach((section) => section.classList.add('visible'));
         }
 
+        // Active nav tracking
+        const nav = document.querySelector('nav');
+        const allSections = document.querySelectorAll('section[id]');
+
+        if ('IntersectionObserver' in window) {
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach((link) => {
+                            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                        });
+                    }
+                });
+            }, { threshold: 0.35 });
+
+            allSections.forEach((s) => navObserver.observe(s));
+        }
+
+        // Nav scroll state
+        const updateNavState = () => {
+            if (nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+        };
+        window.addEventListener('scroll', updateNavState, { passive: true });
+        updateNavState();
+
+        // Stat counter animation
+        const statNumbers = document.querySelectorAll('.stat-number');
+        if (statNumbers.length && 'IntersectionObserver' in window) {
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    const el = entry.target;
+                    const raw = el.textContent.replace(/\D/g, '');
+                    const target = parseInt(raw, 10);
+                    const suffix = el.textContent.replace(/\d/g, '');
+                    if (!target) return;
+                    let current = 0;
+                    const step = Math.ceil(target / 28);
+                    const tick = setInterval(() => {
+                        current = Math.min(current + step, target);
+                        el.textContent = current + suffix;
+                        if (current >= target) clearInterval(tick);
+                    }, 40);
+                    observer.unobserve(el);
+                });
+            }, { threshold: 0.8 });
+            statNumbers.forEach((el) => counterObserver.observe(el));
+        }
+
         const skillHeaders = document.querySelectorAll('.skill-category-header');
         skillHeaders.forEach((skillHeader) => {
             skillHeader.setAttribute('role', 'button');
@@ -158,7 +207,15 @@
                 projectCards.forEach((card) => {
                     const categories = (card.getAttribute('data-category') || '').split(' ');
                     const show = filter === 'all' || categories.includes(filter);
-                    card.style.display = show ? 'flex' : 'none';
+                    if (show) {
+                        card.classList.remove('is-hidden');
+                        card.style.display = 'flex';
+                    } else {
+                        card.classList.add('is-hidden');
+                        setTimeout(() => {
+                            if (card.classList.contains('is-hidden')) card.style.display = 'none';
+                        }, 220);
+                    }
                 });
             });
         });
