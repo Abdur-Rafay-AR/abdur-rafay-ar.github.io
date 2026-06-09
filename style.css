@@ -1758,10 +1758,8 @@ section.visible .certificate-card:nth-child(2){ transition-delay: 0.14s; }
 
 /* Contact Section */
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: var(--spacing-2xl);
-    align-items: start;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-info {

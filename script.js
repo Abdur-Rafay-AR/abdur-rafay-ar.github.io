@@ -261,50 +261,5 @@
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('resize', updateHeaderBackground, { passive: true });
 
-        // Contact form — Web3Forms
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const btn = contactForm.querySelector('.submit-btn');
-                const name    = contactForm.querySelector('#contact-name').value.trim();
-                const email   = contactForm.querySelector('#contact-email').value.trim();
-                const subject = contactForm.querySelector('#contact-subject').value.trim();
-                const message = contactForm.querySelector('#contact-message').value.trim();
-
-                if (!name || !email || !subject || !message) return;
-
-                btn.disabled = true;
-                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-
-                try {
-                    const res = await fetch('https://api.web3forms.com/submit', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-                        body: JSON.stringify({
-                            access_key: '02353f21-d580-4ed3-8866-47585ef22394',
-                            name, email, subject, message
-                        })
-                    });
-                    const data = await res.json();
-                    if (data.success) {
-                        btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-                        contactForm.reset();
-                        setTimeout(() => {
-                            btn.disabled = false;
-                            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-                        }, 3000);
-                    } else {
-                        throw new Error('Send failed');
-                    }
-                } catch {
-                    btn.disabled = false;
-                    btn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Failed — try emailing directly';
-                    setTimeout(() => {
-                        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-                    }, 4000);
-                }
-            });
-        }
     });
 })();
