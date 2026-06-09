@@ -29,6 +29,7 @@ yarn-error.log*
 node_modules/
 
 # Build directories
+
 dist/
 build/
 
@@ -39,3 +40,5 @@ build/
 docs/
 
 .claude/
+
+temp/
