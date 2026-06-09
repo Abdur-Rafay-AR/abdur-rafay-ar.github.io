@@ -261,7 +261,7 @@
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('resize', updateHeaderBackground, { passive: true });
 
-        // Contact form — mailto fallback (no backend needed)
+        // Contact form — opens Gmail compose in a new tab
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
@@ -274,8 +274,8 @@
                 if (!name || !email || !subject || !message) return;
 
                 const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-                const mailto = `mailto:abdurrafay432007@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                window.location.href = mailto;
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&to=abdurrafay432007%40gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.open(gmailUrl, '_blank');
             });
         }
     });
