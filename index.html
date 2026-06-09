@@ -113,7 +113,7 @@
                     <span class="hero-muted">with AI & Code</span>
                 </h1>
                 <p class="animate__animated animate__fadeInUp animate__delay-1s">
-                    I'm Abdur Rafay, an Artificial Intelligence student at Bahria University, passionate about building intelligent systems and full-stack web applications. I specialize in AI/ML, web scraping, automation, and modern web development.
+                    I'm Abdur Rafay, an AI Engineering student at Bahria University. I build production-grade LLM applications, RAG pipelines, and multi-agent systems — with experience shipping 25+ AI agents across healthcare, finance, and education.
                 </p>
                 <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
                     <a href="#projects" class="cta-button primary">
@@ -127,16 +127,16 @@
                 </div>
                 <div class="hero-stats animate__animated animate__fadeInUp animate__delay-3s">
                     <div class="stat">
-                        <span class="stat-number">2+</span>
-                        <span class="stat-label">Years Experience</span>
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">AI Agents Shipped</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Projects Completed</span>
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Internships</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Technologies</span>
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Open Source Projects</span>
                     </div>
                 </div>
             </div>
@@ -476,65 +476,105 @@
                 <button class="filter-btn" data-filter="automation">Automation</button>
             </div>
             <div class="projects-container">
-                <div class="project-card" data-category="web automation">
+                <div class="project-card" data-category="ai">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>Bahria LMS Assignment Checker</h3>
-                            <span class="project-status">Completed</span>
+                            <h3>Long-Running Autonomous Agent</h3>
+                            <span class="project-status">Open Source</span>
                         </div>
-                        <p>A streamlined web application to check pending LMS assignments for Bahria University students, featuring automatic login, real-time assignment tracking, and notifications. Built with Python Streamlit and modern UI.</p>
+                        <p>Self-hosted AI agent capable of running autonomously for days or weeks. Uses LLM-driven planning loops, sandboxed Python execution, persistent memory, and resumable sessions via API control. Structured planning minimises hallucination rates.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">LLMs</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Abdur-Rafay-AR/long-running-autonomous-agent" target="_blank" class="btn-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>ai-cache</h3>
+                            <span class="project-status">Open Source</span>
+                        </div>
+                        <p>Open-source Python library that automatically caches LLM API responses across OpenAI, Anthropic Claude, and Google Gemini. Cuts repeated API costs and improves latency for SQL and NLP query workloads.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">Anthropic</span>
+                            <span class="tech-tag">Gemini</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Abdur-Rafay-AR/ai-cache" target="_blank" class="btn-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Agent Testing Suite</h3>
+                            <span class="project-status">Open Source</span>
+                        </div>
+                        <p>Dashboard for evaluating multi-agent AI pipelines. Tracks latency, API cost, and tool call frequency with interactive flow visualisation — enabling data-driven agent optimisation and debugging.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Multi-Agent</span>
+                            <span class="tech-tag">LangChain</span>
                             <span class="tech-tag">Streamlit</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/bahria-LMS-assignment-checker" target="_blank" class="btn-icon">
+                            <a href="https://github.com/Abdur-Rafay-AR/agent-testing-suite" target="_blank" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card" data-category="automation">
+
+                <div class="project-card" data-category="ai">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>Etsy Shop Analytics Scraper</h3>
-                            <span class="project-status">Completed</span>
+                            <h3>runelog</h3>
+                            <span class="project-status">Open Source</span>
                         </div>
-                        <p>A comprehensive Python-based web scraper designed to extract shop information from Etsy, including sales data, contact information, and revenue analytics through the EverBee API integration.</p>
+                        <p>Lightweight, zero-dependency Python library for reproducible ML experimentation and run tracking. File-system based — similar to MLflow but with no server setup, no config, and instant local use.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">BeautifulSoup</span>
-                            <span class="tech-tag">API Integration</span>
-                            <span class="tech-tag">Web Scraping</span>
+                            <span class="tech-tag">MLOps</span>
+                            <span class="tech-tag">Experiment Tracking</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/etsy-scraper" target="_blank" class="btn-icon">
+                            <a href="https://github.com/Abdur-Rafay-AR/runelog" target="_blank" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="web">
+
+                <div class="project-card" data-category="ai">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>Task Management API</h3>
+                            <h3>Stock Market Predictor</h3>
                             <span class="project-status">Completed</span>
                         </div>
-                        <p>A RESTful API built with Flask and MySQL for task management. Features include user authentication, CRUD operations, task categorization, and deadline tracking with comprehensive API documentation.</p>
+                        <p>LSTM-based stock price forecasting app built with PyTorch and Streamlit. Pulls real-time data from Yahoo Finance with customisable ticker inputs and interactive chart visualisations.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">SQLite</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">Authentication</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Yahoo Finance</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/task-manager-api" target="_blank" class="btn-icon">
+                            <a href="https://github.com/Abdur-Rafay-AR/stock-market-predictor" target="_blank" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://abdurrafay.pythonanywhere.com" class="btn-icon">
-                                <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </div>
@@ -546,158 +586,16 @@
                             <h3>Plant Disease Classifier</h3>
                             <span class="project-status">Completed</span>
                         </div>
-                        <p>A Streamlit web app that uses a CNN model to detect plant diseases from leaf images. Supports 38 disease classes across multiple crops using TensorFlow.</p>
+                        <p>CNN model trained on 38 plant disease classes across multiple crops, deployed as a Streamlit web app. Upload a leaf image and get instant disease detection with class probability scores using TensorFlow.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Classification</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">CNN</span>
                             <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Computer Vision</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/plant-disease-classifier" target="_blank" class="btn-icon">
+                            <a href="https://github.com/Abdur-Rafay-AR/plant-disease-classifier" target="_blank" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>AU Domain Market Analyzer</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>A Python-based scraper and analyzer for Australian suburb real estate data from Domain.com.au — outputs structured CSV reports on property prices, days on market, and sales activity.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Web Scraping</span>
-                            <span class="tech-tag">Data Analysis</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/domain-market-analyzer" target="_blank" class="btn-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Stock Market Predictor</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>A stock price prediction app using Streamlit and PyTorch LSTM, featuring real-time data from Yahoo Finance, customizable inputs, and interactive visualizations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Web Scraping</span>
-                            <span class="tech-tag">Data Analysis</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/stock-market-predictor" target="_blank" class="btn-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Student Performance Dashboard</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>An advanced interactive dashboard for analyzing student performance factors using machine learning and statistical analysis.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Regression</span>
-                            <span class="tech-tag">Data Analysis</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/student-performance-dashboard" target="_blank" class="btn-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Mall Customer Segmentation</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>An interactive web application for customer segmentation analysis using machine learning clustering algorithms.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Data Visualisation</span>
-                            <span class="tech-tag">Data Analysis</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/customer-segmentation" target="_blank" class="btn-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Loan Approval Predictor</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>This project focuses on predicting loan approval outcomes using machine learning techniques, with special attention to handling imbalanced datasets and providing comprehensive analysis.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Logistic Regression</span>
-                            <span class="tech-tag">Data Analysis</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/loan-approval-predictor" target="_blank" class="btn-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Forest Cover Type Classifier</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>A machine learning web application for predicting forest cover types based on cartographic and environmental features using the UCI Forest CoverType dataset.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">XGBoost</span>
-                            <span class="tech-tag">Data Analysis</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/forest-cover-type-classifier" target="_blank" class="btn-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="web">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Personal Study Room</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>A JavaScript application that provides a personalized study space with features like note-taking, task management, and progress tracking.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Web Development</span>
-                            <span class="tech-tag">Productivity</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/study-room" target="_blank" class="btn-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://abdur-rafay-ar.github.io/study-room" class="btn-icon">
-                                <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </div>
@@ -825,39 +723,31 @@
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
-                    
+
                     <div class="contact-details">
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div class="contact-text">
                                 <h4>Email</h4>
                                 <a href="mailto:abdurrafay432007@gmail.com">abdurrafay432007@gmail.com</a>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="contact-text">
                                 <h4>Location</h4>
                                 <p>Wah Cantt, Pakistan</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
                             <div class="contact-text">
                                 <h4>Response Time</h4>
                                 <p>Within 24 hours</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="social-links">
                         <h4>Follow Me</h4>
                         <div class="social-icons">
@@ -874,6 +764,30 @@
                         </div>
                     </div>
                 </div>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="your@email.com" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" placeholder="What's this about?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                    <p class="form-note">Or email me directly at <a href="mailto:abdurrafay432007@gmail.com">abdurrafay432007@gmail.com</a></p>
+                </form>
             </div>
         </section>
     </main>

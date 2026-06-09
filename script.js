@@ -260,5 +260,23 @@
 
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('resize', updateHeaderBackground, { passive: true });
+
+        // Contact form — mailto fallback (no backend needed)
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name    = contactForm.querySelector('#contact-name').value.trim();
+                const email   = contactForm.querySelector('#contact-email').value.trim();
+                const subject = contactForm.querySelector('#contact-subject').value.trim();
+                const message = contactForm.querySelector('#contact-message').value.trim();
+
+                if (!name || !email || !subject || !message) return;
+
+                const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+                const mailto = `mailto:abdurrafay432007@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailto;
+            });
+        }
     });
 })();
