@@ -1,34 +1,6 @@
 (() => {
-    const MIN_LOADING_SCREEN_TIME = 350;
     const LIGHT_HEADER_BG = 'rgba(248, 250, 252, 0.92)';
-    const DARK_HEADER_BG = 'rgba(2, 22, 17, 0.88)';
-
-    document.body.style.overflow = 'hidden';
-
-    const hideLoadingScreen = () => {
-        const loadingScreen = document.getElementById('loading-screen');
-        if (!loadingScreen) {
-            document.body.style.overflow = 'visible';
-            return;
-        }
-
-        const startTime = performance.now();
-        const elapsed = performance.now() - startTime;
-        const delay = Math.max(0, MIN_LOADING_SCREEN_TIME - elapsed);
-
-        setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-            document.body.style.overflow = 'visible';
-
-            setTimeout(() => {
-                if (loadingScreen.parentNode) {
-                    loadingScreen.remove();
-                }
-            }, 450);
-        }, delay);
-    };
-
-    window.addEventListener('load', hideLoadingScreen, { once: true });
+    const DARK_HEADER_BG = 'rgba(10, 10, 10, 0.88)';
 
     document.addEventListener('DOMContentLoaded', () => {
         const root = document.documentElement;
