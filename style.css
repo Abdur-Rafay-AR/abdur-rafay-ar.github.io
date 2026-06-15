@@ -948,8 +948,7 @@ section.visible .certificate-card:nth-child(2){ transition-delay: 0.14s; }
 }
 
 .about-photo {
-    position: sticky;
-    top: 7rem;
+    position: static;
 }
 
 .profile-photo {
@@ -1331,7 +1330,7 @@ section.visible .certificate-card:nth-child(2){ transition-delay: 0.14s; }
     height: 3rem;
     border-radius: var(--radius-md);
     flex-shrink: 0;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .skill-info {
