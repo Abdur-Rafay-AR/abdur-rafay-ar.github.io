@@ -1331,6 +1331,7 @@ section.visible .certificate-card:nth-child(2){ transition-delay: 0.14s; }
     height: 3rem;
     border-radius: var(--radius-md);
     flex-shrink: 0;
+    object-fit: contain;
 }
 
 .skill-info {
