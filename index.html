@@ -10,21 +10,28 @@
     <meta name="keywords" content="Abdur Rafay, AI Engineer, LLM Developer, RAG Pipelines, Multi-Agent Systems, LangChain, Machine Learning Engineer, Python Developer, FastAPI, Flask, Django, React, Web Scraping, Automation, Bahria University, Lythe Labs, AI Portfolio">
     <meta name="author" content="Abdur Rafay">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#22c55e">
-    
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f2f2f2" media="(prefers-color-scheme: light)">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Abdur Rafay - Portfolio">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://abdur-rafay-ar.github.io/portfolio/">
     <meta property="og:title" content="Abdur Rafay - AI Engineer">
     <meta property="og:description" content="Explore the portfolio of Abdur Rafay, an AI Engineer specializing in LLMs, multi-agent systems, RAG pipelines, and production AI applications.">
-    <meta property="og:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/logo.jpg">
-    
+    <meta property="og:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg">
+    <meta property="og:image:width" content="638">
+    <meta property="og:image:height" content="689">
+    <meta property="og:image:alt" content="Portrait of Abdur Rafay, AI Engineer">
+
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://abdur-rafay-ar.github.io/portfolio/">
-    <meta property="twitter:title" content="Abdur Rafay - AI Engineer">
-    <meta property="twitter:description" content="Explore the portfolio of Abdur Rafay, an AI Engineer specializing in LLMs, multi-agent systems, RAG pipelines, and production AI applications.">
-    <meta property="twitter:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/logo.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Abdur Rafay - AI Engineer">
+    <meta name="twitter:description" content="Explore the portfolio of Abdur Rafay, an AI Engineer specializing in LLMs, multi-agent systems, RAG pipelines, and production AI applications.">
+    <meta name="twitter:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg">
+    <meta name="twitter:image:alt" content="Portrait of Abdur Rafay, AI Engineer">
     
     <!-- Favicon -->
     <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
@@ -46,6 +53,11 @@
     <link rel="preload" href="assets/logo.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
     
+    <!-- Apply saved theme before first paint to avoid a flash of the wrong theme -->
+    <script>
+        try { document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark'); } catch (e) {}
+    </script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -67,16 +79,27 @@
         "@type": "EducationalOrganization",
         "name": "Bahria University"
       },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Lythe Labs"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wah Cantt",
+        "addressCountry": "PK"
+      },
       "knowsAbout": ["Artificial Intelligence", "Machine Learning", "LLMs", "RAG Pipelines", "Multi-Agent Systems", "LangChain", "Python", "FastAPI", "React", "Flask", "Django", "Web Scraping", "Automation", "TensorFlow", "PyTorch"],
       "sameAs": [
         "https://www.linkedin.com/in/abdur-rafay-705416326/",
         "https://github.com/Abdur-Rafay-AR",
-        "https://www.upwork.com/freelancers/~01e0e53ea3fc415198"
+        "https://www.upwork.com/freelancers/~01e0e53ea3fc415198",
+        "https://medium.com/@abdurrafay432007"
       ]
     }
     </script>
 </head>
 <body>
+    <a class="skip-link" href="#hero">Skip to main content</a>
     <header>
         <nav>
             <div class="logo">
@@ -85,18 +108,19 @@
                 </a>
                 <span class="logo-text">Abdur Rafay</span>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-links">
+            </button>
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#articles">Articles</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -221,7 +245,7 @@
                             <i class="fas fa-envelope"></i>
                             Let's Talk
                         </a>
-                        <a href="https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing" class="btn-secondary" target="_blank">
+                        <a href="https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing" class="btn-secondary" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-eye"></i>
                             View CV
                         </a>
@@ -299,7 +323,7 @@
                 <p class="section-subtitle">Technologies I work with</p>
             </div>
             <div class="skills-container">
-                <div class="skill-category active">
+                <div class="skill-category">
                     <div class="skill-category-header" data-category="languages">
                         <h3><i class="fas fa-code"></i> Languages</h3>
                         <i class="fas fa-chevron-down dropdown-arrow"></i>
@@ -336,14 +360,14 @@
                     </div>
                     <div class="skill-items" id="ai-skills">
                         <div class="skill-item">
-                            <img src="assets/python.svg" alt="LangChain" loading="lazy" decoding="async">
+                            <div class="skill-icon"><i class="fas fa-link" aria-hidden="true"></i></div>
                             <div class="skill-info">
                                 <h4>LangChain</h4>
                                 <p>Building agentic pipelines, RAG systems, and tool-augmented LLM applications</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/pytorch.webp" alt="Hugging Face" loading="lazy" decoding="async">
+                            <div class="skill-icon"><i class="fas fa-face-smile" aria-hidden="true"></i></div>
                             <div class="skill-info">
                                 <h4>Hugging Face</h4>
                                 <p>Sentence Transformers, embeddings, and open-source model fine-tuning</p>
@@ -357,14 +381,14 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/python.svg" alt="LLM APIs" loading="lazy" decoding="async">
+                            <div class="skill-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
                             <div class="skill-info">
                                 <h4>LLM APIs</h4>
                                 <p>OpenAI, Anthropic Claude, Groq, Gemini: prompt engineering and fine-tuning</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/python.svg" alt="RAG" loading="lazy" decoding="async">
+                            <div class="skill-icon"><i class="fas fa-diagram-project" aria-hidden="true"></i></div>
                             <div class="skill-info">
                                 <h4>RAG & Multi-Agent Systems</h4>
                                 <p>Production RAG pipelines, vector search, and orchestrated multi-agent workflows</p>
@@ -380,7 +404,7 @@
                     </div>
                     <div class="skill-items" id="backend-skills">
                         <div class="skill-item">
-                            <img src="assets/flask.webp" alt="FastAPI" loading="lazy" decoding="async">
+                            <div class="skill-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
                             <div class="skill-info">
                                 <h4>FastAPI</h4>
                                 <p>High-performance async REST APIs for AI services and data pipelines</p>
@@ -417,14 +441,14 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/sql-database.webp" alt="ChromaDB" loading="lazy" decoding="async">
+                            <div class="skill-icon"><i class="fas fa-database" aria-hidden="true"></i></div>
                             <div class="skill-info">
                                 <h4>ChromaDB</h4>
                                 <p>Vector database for embedding storage and semantic similarity search in RAG systems</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <img src="assets/git.webp" alt="Docker" loading="lazy" decoding="async">
+                            <div class="skill-icon"><i class="fab fa-docker" aria-hidden="true"></i></div>
                             <div class="skill-info">
                                 <h4>Docker & Git</h4>
                                 <p>Containerised deployments, CI/CD pipelines, and version control workflows</p>
@@ -549,7 +573,7 @@
                             <span class="tech-tag">FastAPI</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/long-running-autonomous-agent" target="_blank" class="btn-icon" aria-label="GitHub">
+                            <a href="https://github.com/Abdur-Rafay-AR/long-running-autonomous-agent" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -570,7 +594,7 @@
                             <span class="tech-tag">Gemini</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/ai-cache" target="_blank" class="btn-icon" aria-label="GitHub">
+                            <a href="https://github.com/Abdur-Rafay-AR/ai-cache" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -591,7 +615,7 @@
                             <span class="tech-tag">Streamlit</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/agent-testing-suite" target="_blank" class="btn-icon" aria-label="GitHub">
+                            <a href="https://github.com/Abdur-Rafay-AR/agent-testing-suite" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -611,7 +635,7 @@
                             <span class="tech-tag">Experiment Tracking</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/runelog" target="_blank" class="btn-icon" aria-label="GitHub">
+                            <a href="https://github.com/Abdur-Rafay-AR/runelog" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -632,7 +656,7 @@
                             <span class="tech-tag">Yahoo Finance</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/stock-market-predictor" target="_blank" class="btn-icon" aria-label="GitHub">
+                            <a href="https://github.com/Abdur-Rafay-AR/stock-market-predictor" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -653,7 +677,7 @@
                             <span class="tech-tag">Computer Vision</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/plant-disease-classifier" target="_blank" class="btn-icon" aria-label="GitHub">
+                            <a href="https://github.com/Abdur-Rafay-AR/plant-disease-classifier" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -670,7 +694,7 @@
             <div class="articles-container">
             <a class="article-card" href="https://medium.com/@abdurrafay432007/my-journey-into-ethical-web-scraping-with-python-️-4b5f8b48de10" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener">
                 <div class="article-image">
-                <img src="assets/article1.png" alt="Web Scraping Ethics" loading="lazy" decoding="async">
+                <img src="assets/article1.jpg" alt="Illustration of a web page linked to the Python logo" width="1024" height="541" loading="lazy" decoding="async">
                 </div>
                 <div class="article-content">
                 <div class="article-category">Web Scraping</div>
@@ -680,7 +704,7 @@
             </a>
             <a class="article-card" href="https://medium.com/@abdurrafay432007/what-i-learned-about-rag-models-as-an-ai-intern-real-world-lessons-from-a-startup-360890d3c281" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener">
                 <div class="article-image">
-                <img src="assets/article2.png" alt="RAG Models" loading="lazy" decoding="async">
+                <img src="assets/article2.jpg" alt="Digital brain connecting document retrieval and text generation" width="1024" height="519" loading="lazy" decoding="async">
                 </div>
                 <div class="article-content">
                 <div class="article-category">AI & Machine Learning</div>
@@ -702,7 +726,7 @@
                 <div class="certificate-card">
                     <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" target="_blank" rel="noopener" class="certificate-image-link">
                         <div class="certificate-image">
-                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" alt="Certificate Name" loading="lazy" decoding="async">
+                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" alt="IBM AI Developer Professional Certificate" loading="lazy" decoding="async">
                             <div class="certificate-overlay">
                                 <i class="fas fa-search-plus"></i>
                                 <span>View Certificate</span>
@@ -712,7 +736,8 @@
                     <div class="certificate-content">
                         <div class="certificate-header">
                             <div class="certificate-icon">
-                                <i class="fas fa-certificate"></i>
+                                <i class="fas fa-certificate" aria-hidden="true"></i>
+                                <i class="fas fa-check certificate-check" aria-hidden="true"></i>
                             </div>
                             <div class="certificate-issuer">
                                 <span class="issuer-name">IBM</span>
@@ -738,7 +763,7 @@
                 <div class="certificate-card">
                     <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" target="_blank" rel="noopener" class="certificate-image-link">
                         <div class="certificate-image">
-                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" alt="Certificate Name 2" loading="lazy" decoding="async">
+                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" alt="NVIDIA AI Infrastructure and Operations Fundamentals certificate" loading="lazy" decoding="async">
                             <div class="certificate-overlay">
                                 <i class="fas fa-search-plus"></i>
                                 <span>View Certificate</span>
@@ -748,7 +773,8 @@
                     <div class="certificate-content">
                         <div class="certificate-header">
                             <div class="certificate-icon">
-                                <i class="fas fa-certificate"></i>
+                                <i class="fas fa-certificate" aria-hidden="true"></i>
+                                <i class="fas fa-check certificate-check" aria-hidden="true"></i>
                             </div>
                             <div class="certificate-issuer">
                                 <span class="issuer-name">NVIDIA</span>
@@ -825,13 +851,13 @@
                     <div class="social-links">
                         <h4>Follow Me</h4>
                         <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/Abdur-Rafay-AR" target="_blank" aria-label="GitHub">
+                            <a href="https://github.com/Abdur-Rafay-AR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" aria-label="Upwork">
+                            <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
                                 <img src="assets/upwork-light.png" class="upwork-icon light" alt="Upwork" loading="lazy" decoding="async">
                                 <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="Upwork" loading="lazy" decoding="async">
                             </a>
@@ -847,13 +873,13 @@
         <div class="footer-bottom">
             <p>&copy; 2026 Abdur Rafay. All rights reserved.</p>
             <div class="footer-social">
-                <a href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/Abdur-Rafay-AR" target="_blank" aria-label="GitHub">
+                <a href="https://github.com/Abdur-Rafay-AR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" aria-label="Upwork">
+                <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
                     <img src="assets/upwork-light.png" class="upwork-icon light" alt="Upwork" loading="lazy" decoding="async">
                     <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="Upwork" loading="lazy" decoding="async">
                 </a>

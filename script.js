@@ -7,13 +7,11 @@
         const header = document.querySelector('header');
         const sections = document.querySelectorAll('.animated-section');
         const navLinks = document.querySelectorAll('nav ul li a');
-        const shapes = document.querySelectorAll('.shape');
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
         const hamburger = document.querySelector('.hamburger');
         const mobileNavLinks = document.querySelector('.nav-links');
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const isSmallScreen = window.matchMedia('(max-width: 900px)').matches;
 
         const themeToggle = document.createElement('button');
         themeToggle.className = 'theme-toggle';
@@ -71,6 +69,7 @@
                 if (mobileNavLinks?.classList.contains('active')) {
                     mobileNavLinks.classList.remove('active');
                     hamburger?.classList.remove('active');
+                    hamburger?.setAttribute('aria-expanded', 'false');
                 }
             });
         });
@@ -193,29 +192,10 @@
         });
 
         hamburger?.addEventListener('click', () => {
-            mobileNavLinks?.classList.toggle('active');
+            const isOpen = mobileNavLinks?.classList.toggle('active');
             hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
-
-        const lazyDataImages = document.querySelectorAll('img[data-src]');
-        if (lazyDataImages.length && 'IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    }
-
-                    const image = entry.target;
-                    if (image instanceof HTMLImageElement && image.dataset.src) {
-                        image.src = image.dataset.src;
-                    }
-
-                    observer.unobserve(image);
-                });
-            }, { rootMargin: '120px 0px' });
-
-            lazyDataImages.forEach((image) => imageObserver.observe(image));
-        }
 
         const certificateCards = document.querySelectorAll('.certificate-card');
         if (certificateCards.length && 'IntersectionObserver' in window) {
@@ -245,15 +225,6 @@
             isTicking = true;
             requestAnimationFrame(() => {
                 updateHeaderBackground();
-
-                if (!reducedMotion && !isSmallScreen && shapes.length > 0) {
-                    const scrollOffset = window.scrollY;
-                    shapes.forEach((shape, index) => {
-                        const speed = 0.04 + index * 0.006;
-                        shape.style.transform = `translate3d(0, ${Math.round(scrollOffset * speed)}px, 0)`;
-                    });
-                }
-
                 isTicking = false;
             });
         };
