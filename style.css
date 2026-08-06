@@ -54,11 +54,14 @@
 
 /* ── 1. Tokens ─────────────────────────────────────────────── */
 :root {
-  /* Brand green: kept, but used as a signal, never as decoration. */
-  --green-400: #4ade80;
-  --green-500: #22c55e;
-  --green-600: #16a34a;
-  --green-700: #15803d;
+  /* Brand terracotta: kept, but used as a signal, never as decoration. */
+  --brand-400: #f08a6a;
+  --brand-500: #e0653f;
+  --brand-600: #c14a29;
+  --brand-700: #9c3a20;
+
+  /* Semantic, not brand: "available" must stay green to read as available. */
+  --ok: #46a35f;
 
   /* Dark is the default surface. */
   --bg:         #08090a;
@@ -70,12 +73,12 @@
   --text:       #ecedec;
   --text-2:     #9ba09d;
   --text-3:     #7f8582;
-  --accent:     var(--green-500);
-  --accent-ink: var(--green-400);
-  --accent-wash:rgba(34, 197, 94, .10);
-  --on-accent:  #04140b;
+  --accent:     var(--brand-500);
+  --accent-ink: var(--brand-400);
+  --accent-wash:rgba(224, 101, 63, .10);
+  --on-accent:  #1a0703;
   --shadow:     0 1px 2px rgba(0,0,0,.4), 0 12px 32px -18px rgba(0,0,0,.9);
-  --focus:      var(--green-400);
+  --focus:      var(--brand-400);
 
   /* Type */
   --sans: 'Switzer', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -106,12 +109,13 @@
   --text:       #232824;
   --text-2:     #5b615c;
   --text-3:     #656b66;
-  --accent:     var(--green-700);
-  --accent-ink: #196b37;
-  --accent-wash:rgba(21, 128, 61, .07);
-  --on-accent:  #f7fbf8;
+  --accent:     var(--brand-700);
+  --accent-ink: #8f3319;
+  --ok:         #2f7d47;
+  --accent-wash:rgba(156, 58, 32, .07);
+  --on-accent:  #fdf7f5;
   --shadow:     0 1px 2px rgba(26,31,27,.04), 0 14px 34px -24px rgba(26,31,27,.4);
-  --focus:      var(--green-700);
+  --focus:      var(--brand-700);
 }
 
 /* ── 2. Reset & base ───────────────────────────────────────── */
@@ -225,11 +229,11 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
   color: var(--on-accent);
 }
 .btn--primary:hover {
-  background: var(--green-400);
-  border-color: var(--green-400);
+  background: var(--brand-400);
+  border-color: var(--brand-400);
   color: var(--on-accent);
 }
-[data-theme="light"] .btn--primary:hover { background: var(--green-600); border-color: var(--green-600); }
+[data-theme="light"] .btn--primary:hover { background: var(--brand-600); border-color: var(--brand-600); }
 .btn--primary .ico { transition: transform .22s var(--ease); }
 .btn--primary:hover .ico { transform: translateX(3px); }
 
@@ -264,10 +268,10 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 }
 .tag--accent {
   color: var(--accent-ink);
-  border-color: rgba(34, 197, 94, .32);
+  border-color: rgba(224, 101, 63, .32);
   background: var(--accent-wash);
 }
-[data-theme="light"] .tag--accent { border-color: rgba(21, 128, 61, .28); }
+[data-theme="light"] .tag--accent { border-color: rgba(156, 58, 32, .28); }
 
 .stack {
   display: flex;
@@ -296,8 +300,8 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 .status__dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--green-500);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, .18);
+  background: var(--ok);
+  box-shadow: 0 0 0 3px rgba(70, 163, 95, .18);
 }
 
 /* Upwork mark is tinted with currentColor so it reads in both themes. */
@@ -876,6 +880,19 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
   opacity: 1;
   transform: none;
   transition: opacity .6s var(--ease), transform .6s var(--ease);
+}
+
+/* Theme crossfade. Only live for the ~280ms after a toggle click: a blanket
+   transition would otherwise animate every hover and the intro as well. */
+.theme-fade, .theme-fade *, .theme-fade *::before, .theme-fade *::after {
+  transition: background-color .28s var(--ease),
+              border-color     .28s var(--ease),
+              color            .28s var(--ease),
+              fill             .28s var(--ease),
+              stroke           .28s var(--ease),
+              box-shadow       .28s var(--ease),
+              outline-color    .28s var(--ease) !important;
+  transition-delay: 0s !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

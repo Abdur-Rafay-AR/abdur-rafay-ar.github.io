@@ -27,8 +27,18 @@
 
   applyTheme(root.getAttribute('data-theme') || 'dark');
 
+  let fadeTimer;
   toggle?.addEventListener('click', () => {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+
+    // Crossfade the swap, but never the first paint: the class goes on for the
+    // length of the transition only. Rapid clicks just restart the window.
+    if (!reduceMotion) {
+      root.classList.add('theme-fade');
+      clearTimeout(fadeTimer);
+      fadeTimer = setTimeout(() => root.classList.remove('theme-fade'), 300);
+    }
+
     applyTheme(next);
     try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
   });
