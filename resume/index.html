@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Résumé — Abdur Rafay</title>
+<meta name="robots" content="noindex">
+<style>
+  html { color-scheme: dark light; }
+  body {
+    margin: 0; min-height: 100svh;
+    display: grid; place-content: center; gap: 1rem; text-align: center;
+    background: #08090a; color: #9ba09d;
+    font: 15px/1.6 ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  a { color: #4ade80; }
+  @media (prefers-color-scheme: light) { body { background: #f4f3ef; color: #5b615c; } a { color: #15803d; } }
+</style>
+</head>
+<body>
+<!--
+  Stable résumé URL: https://abdur-rafay-ar.github.io/portfolio/resume/
+  Put this link on LinkedIn, in email signatures, on applications. It never changes.
+
+  To update the résumé: drop the new PDF at assets/resume.pdf and push.
+  Until that file exists, this page falls back to the Drive copy below.
+-->
+<p>Opening résumé…</p>
+<p><a id="fallback" href="https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing">Open it manually</a></p>
+
+<script>
+  var LOCAL = '../assets/resume.pdf';
+  var DRIVE = document.getElementById('fallback').href;
+  fetch(LOCAL, { method: 'HEAD' })
+    .then(function (r) { location.replace(r.ok ? LOCAL : DRIVE); })
+    .catch(function () { location.replace(DRIVE); });
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing"></noscript>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "Abdur Rafay, AI Engineer",
+  "short_name": "Abdur Rafay",
+  "description": "AI Engineer building production voice agents, multi-agent systems, and the infrastructure that runs them.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#08090a",
+  "theme_color": "#08090a",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
