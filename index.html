@@ -19,23 +19,24 @@
 <meta property="og:url" content="https://abdur-rafay-ar.github.io/portfolio/">
 <meta property="og:title" content="Abdur Rafay | AI Engineer">
 <meta property="og:description" content="Member of Technical Staff at Lythe Labs. Production voice agents, multi-agent systems, and the CI/CD and AWS infrastructure behind them.">
-<meta property="og:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg">
-<meta property="og:image:width" content="638">
-<meta property="og:image:height" content="689">
-<meta property="og:image:alt" content="Portrait of Abdur Rafay, AI Engineer">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Abdur Rafay, AI Engineer: I build voice agents and the infrastructure they run on">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Abdur Rafay | AI Engineer">
 <meta name="twitter:description" content="Member of Technical Staff at Lythe Labs. Production voice agents, multi-agent systems, and the infrastructure behind them.">
-<meta name="twitter:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg">
+<meta name="twitter:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/og-card.png">
+<meta name="twitter:image:alt" content="Abdur Rafay, AI Engineer">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/switzer.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/zodiak.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/jetbrainsmono-400.woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 
 <script>
@@ -65,22 +66,45 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Abdur Rafay",
-  "url": "https://abdur-rafay-ar.github.io/portfolio/",
-  "jobTitle": "Member of Technical Staff",
-  "description": "AI Engineer building production voice agents, multi-agent systems, and the cloud infrastructure that runs them",
-  "image": "https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg",
-  "email": "abdurrafay.tech@gmail.com",
-  "alumniOf": { "@type": "EducationalOrganization", "name": "Bahria University" },
-  "worksFor": { "@type": "Organization", "name": "Lythe Labs" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
-  "knowsAbout": ["Artificial Intelligence","Voice Agents","Multi-Agent Systems","LLMs","RAG Pipelines","LangChain","Model Context Protocol","Python","FastAPI","AWS","Google Cloud","CI/CD","Docker","TensorFlow","PyTorch"],
-  "sameAs": [
-    "https://www.linkedin.com/in/abdur-rafay-ar/",
-    "https://github.com/Abdur-Rafay-AR",
-    "https://www.upwork.com/freelancers/~01e0e53ea3fc415198",
-    "https://medium.com/@abdurrafay432007"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://abdur-rafay-ar.github.io/portfolio/#website",
+      "url": "https://abdur-rafay-ar.github.io/portfolio/",
+      "name": "Abdur Rafay",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://abdur-rafay-ar.github.io/portfolio/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://abdur-rafay-ar.github.io/portfolio/#page",
+      "url": "https://abdur-rafay-ar.github.io/portfolio/",
+      "name": "Abdur Rafay, AI Engineer",
+      "isPartOf": { "@id": "https://abdur-rafay-ar.github.io/portfolio/#website" },
+      "about": { "@id": "https://abdur-rafay-ar.github.io/portfolio/#person" },
+      "primaryImageOfPage": "https://abdur-rafay-ar.github.io/portfolio/assets/og-card.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://abdur-rafay-ar.github.io/portfolio/#person",
+      "name": "Abdur Rafay",
+      "url": "https://abdur-rafay-ar.github.io/portfolio/",
+      "jobTitle": "Member of Technical Staff",
+      "description": "AI Engineer building production voice agents, multi-agent systems, and the cloud infrastructure that runs them",
+      "image": "https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg",
+      "email": "abdurrafay.tech@gmail.com",
+      "knowsLanguage": ["en", "ur"],
+      "alumniOf": { "@type": "EducationalOrganization", "name": "Bahria University" },
+      "worksFor": { "@type": "Organization", "name": "Lythe Labs" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
+      "knowsAbout": ["Artificial Intelligence","Voice Agents","Multi-Agent Systems","LLMs","RAG Pipelines","LangChain","Model Context Protocol","Python","FastAPI","AWS","Google Cloud","CI/CD","Docker","TensorFlow","PyTorch"],
+      "sameAs": [
+        "https://www.linkedin.com/in/abdur-rafay-ar/",
+        "https://github.com/Abdur-Rafay-AR",
+        "https://www.upwork.com/freelancers/~01e0e53ea3fc415198",
+        "https://medium.com/@abdurrafay432007"
+      ]
+    }
   ]
 }
 </script>
@@ -249,12 +273,6 @@
       </div>
     </div>
   </section>
-
-
-  <!-- statement -->
-  <aside class="band reveal">
-    <p>Anyone can demo an agent.<br><span>Keeping one alive for three weeks is the job.</span></p>
-  </aside>
 
   <!-- ═══ 02 Skills ═══ -->
   <section class="section reveal" id="skills">
@@ -439,12 +457,6 @@
     </ul>
   </section>
 
-
-  <!-- statement -->
-  <aside class="band reveal">
-    <p>If it only works on my laptop,<br><span>it is not finished.</span></p>
-  </aside>
-
   <!-- ═══ 04 Experience ═══ -->
   <section class="section reveal" id="experience">
     <div class="section__head">
@@ -609,7 +621,7 @@
     <ul class="articles">
       <li>
         <a href="https://medium.com/@abdurrafay432007/what-i-learned-about-rag-models-as-an-ai-intern-real-world-lessons-from-a-startup-360890d3c281" target="_blank" rel="noopener">
-          <img src="assets/article2.jpg" alt="" width="1024" height="519" loading="lazy" decoding="async">
+          <img src="assets/article2.jpg" alt="Retrieval-augmented generation: documents feeding an LLM" width="1024" height="519" loading="lazy" decoding="async">
           <div>
             <p class="article__cat">AI &amp; machine learning</p>
             <h3>What I learned about RAG models as an AI intern</h3>
@@ -620,7 +632,7 @@
       </li>
       <li>
         <a href="https://medium.com/@abdurrafay432007/my-journey-into-ethical-web-scraping-with-python-️-4b5f8b48de10" target="_blank" rel="noopener">
-          <img src="assets/article1.jpg" alt="" width="1024" height="541" loading="lazy" decoding="async">
+          <img src="assets/article1.jpg" alt="Ethical web scraping with Python" width="1024" height="541" loading="lazy" decoding="async">
           <div>
             <p class="article__cat">Web scraping</p>
             <h3>My journey into ethical web scraping with Python</h3>
