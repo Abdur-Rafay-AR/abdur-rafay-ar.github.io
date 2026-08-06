@@ -1,892 +1,600 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Abdur Rafay - AI Engineer | LLMs, Multi-Agent Systems & RAG</title>
-    <meta name="description" content="Abdur Rafay is an AI Engineer at Lythe Labs specializing in LLMs, multi-agent systems, RAG pipelines, and production AI applications. Explore my portfolio.">
-    <meta name="keywords" content="Abdur Rafay, AI Engineer, LLM Developer, RAG Pipelines, Multi-Agent Systems, LangChain, Machine Learning Engineer, Python Developer, FastAPI, Flask, Django, React, Web Scraping, Automation, Bahria University, Lythe Labs, AI Portfolio">
-    <meta name="author" content="Abdur Rafay">
-    <meta name="robots" content="index, follow">
-    <meta name="color-scheme" content="dark light">
-    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#f2f2f2" media="(prefers-color-scheme: light)">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Abdur Rafay - Portfolio">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://abdur-rafay-ar.github.io/portfolio/">
-    <meta property="og:title" content="Abdur Rafay - AI Engineer">
-    <meta property="og:description" content="Explore the portfolio of Abdur Rafay, an AI Engineer specializing in LLMs, multi-agent systems, RAG pipelines, and production AI applications.">
-    <meta property="og:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg">
-    <meta property="og:image:width" content="638">
-    <meta property="og:image:height" content="689">
-    <meta property="og:image:alt" content="Portrait of Abdur Rafay, AI Engineer">
+<title>Abdur Rafay — AI Engineer building production LLM systems</title>
+<meta name="description" content="Abdur Rafay is an AI Engineer at Lythe Labs. He builds production LLM applications, RAG pipelines and multi-agent systems — 25+ agents shipped across healthcare, finance and education.">
+<meta name="author" content="Abdur Rafay">
+<meta name="robots" content="index, follow">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#08090a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://abdur-rafay-ar.github.io/portfolio/">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Abdur Rafay - AI Engineer">
-    <meta name="twitter:description" content="Explore the portfolio of Abdur Rafay, an AI Engineer specializing in LLMs, multi-agent systems, RAG pipelines, and production AI applications.">
-    <meta name="twitter:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg">
-    <meta name="twitter:image:alt" content="Portrait of Abdur Rafay, AI Engineer">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
-    <link rel="shortcut icon" href="assets/logo.jpg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="assets/logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Abdur Rafay">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://abdur-rafay-ar.github.io/portfolio/">
+<meta property="og:title" content="Abdur Rafay — AI Engineer building production LLM systems">
+<meta property="og:description" content="AI Engineer at Lythe Labs. Production LLM applications, RAG pipelines and multi-agent systems.">
+<meta property="og:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg">
+<meta property="og:image:width" content="638">
+<meta property="og:image:height" content="689">
+<meta property="og:image:alt" content="Portrait of Abdur Rafay, AI Engineer">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Abdur Rafay — AI Engineer">
+<meta name="twitter:description" content="AI Engineer at Lythe Labs. Production LLM applications, RAG pipelines and multi-agent systems.">
+<meta name="twitter:image" content="https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://abdur-rafay-ar.github.io/portfolio/">
-    
-    <!-- Performance Optimizations -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="assets/logo.jpg" as="image" fetchpriority="high">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
-    
-    <!-- Apply saved theme before first paint to avoid a flash of the wrong theme -->
-    <script>
-        try { document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark'); } catch (e) {}
-    </script>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/logo.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="assets/logo.jpg">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Abdur Rafay",
-      "url": "https://abdur-rafay-ar.github.io/portfolio/",
-      "jobTitle": "AI Engineer",
-      "description": "AI Engineer specializing in LLMs, multi-agent systems, RAG pipelines, and production AI applications",
-      "image": "https://abdur-rafay-ar.github.io/portfolio/assets/logo.jpg",
-      "email": "abdurrafay.tech@gmail.com",
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Bahria University"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Lythe Labs"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wah Cantt",
-        "addressCountry": "PK"
-      },
-      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "LLMs", "RAG Pipelines", "Multi-Agent Systems", "LangChain", "Python", "FastAPI", "React", "Flask", "Django", "Web Scraping", "Automation", "TensorFlow", "PyTorch"],
-      "sameAs": [
-        "https://www.linkedin.com/in/abdur-rafay-705416326/",
-        "https://github.com/Abdur-Rafay-AR",
-        "https://www.upwork.com/freelancers/~01e0e53ea3fc415198",
-        "https://medium.com/@abdurrafay432007"
-      ]
-    }
-    </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<script>
+  /* Set theme before first paint to avoid a flash of the wrong palette. */
+  try {
+    var t = localStorage.getItem('theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abdur Rafay",
+  "url": "https://abdur-rafay-ar.github.io/portfolio/",
+  "jobTitle": "AI Engineer",
+  "description": "AI Engineer specializing in LLMs, multi-agent systems, RAG pipelines, and production AI applications",
+  "image": "https://abdur-rafay-ar.github.io/portfolio/assets/pfp.jpg",
+  "email": "abdurrafay.tech@gmail.com",
+  "alumniOf": { "@type": "EducationalOrganization", "name": "Bahria University" },
+  "worksFor": { "@type": "Organization", "name": "Lythe Labs" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Wah Cantt", "addressCountry": "PK" },
+  "knowsAbout": ["Artificial Intelligence","Machine Learning","LLMs","RAG Pipelines","Multi-Agent Systems","LangChain","Python","FastAPI","React","Flask","Django","Web Scraping","Automation","TensorFlow","PyTorch"],
+  "sameAs": [
+    "https://www.linkedin.com/in/abdur-rafay-705416326/",
+    "https://github.com/Abdur-Rafay-AR",
+    "https://www.upwork.com/freelancers/~01e0e53ea3fc415198",
+    "https://medium.com/@abdurrafay432007"
+  ]
+}
+</script>
 </head>
+
 <body>
-    <a class="skip-link" href="#hero">Skip to main content</a>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#hero" class="logo-link">
-                    <img src="assets/logo.jpg" alt="Abdur Rafay Logo" class="logo-icon" width="32" height="32" decoding="async" fetchpriority="high" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
-                </a>
-                <span class="logo-text">Abdur Rafay</span>
-            </div>
-            <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links" id="primary-navigation">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <main>
-        <section id="hero" class="hero-section animated-section">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-prefix">~/abdur-rafay</span>
-                    <span class="badge-caret">$</span>
-                    <span class="badge-text">AI Engineer</span>
-                    <span class="badge-cursor"></span>
-                </div>
-                <h1>
-                    Crafting<br>
-                    <span class="highlight">Intelligent</span> Systems<br>
-                    <span class="hero-muted">with AI & Code</span>
-                </h1>
-                <p class="animate__animated animate__fadeInUp animate__delay-1s">
-                    I'm Abdur Rafay, an AI Engineer at Lythe Labs. I build production-grade LLM applications, RAG pipelines, and multi-agent systems, with experience shipping 25+ AI agents across healthcare, finance, and education.
-                </p>
-                <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
-                    <a href="#projects" class="cta-button primary">
-                        <i class="fas fa-rocket"></i>
-                        View My Work
-                    </a>
-                    <a href="mailto:abdurrafay.tech@gmail.com" class="cta-button secondary">
-                        <i class="fas fa-envelope"></i>
-                        Get In Touch
-                    </a>
-                </div>
-                <div class="hero-stats animate__animated animate__fadeInUp animate__delay-3s">
-                    <div class="stat">
-                        <span class="stat-number">25+</span>
-                        <span class="stat-label">AI Agents Shipped</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Internships</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Open Source Projects</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual animate__animated animate__fadeInRight animate__delay-1s">
-                <div class="code-snippet">
-                    <div class="code-header">
-                        <div class="code-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <span class="code-title">main.py</span>
-                    </div>
-                    <div class="code-content">
-                        <div class="code-line">
-                            <span class="keyword">class</span> <span class="class-name">AIEngineer</span>:
-                        </div>
-                        <div class="code-line">
-                            <span class="indent">def</span> <span class="function">__init__</span>(self):
-                        </div>
-                        <div class="code-line">
-                            <span class="indent2">self.name = </span><span class="string">"Abdur Rafay"</span>
-                        </div>
-                        <div class="code-line">
-                            <span class="indent2">self.major = </span><span class="string">"Artificial Intelligence"</span>
-                        </div>
-                        <div class="code-line">
-                            <span class="indent2">self.skills = [</span><span class="string">"Python", "AI/ML", "React"</span>]<span class="code-cursor"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- Icon sprite: keeps the page dependency-free (no icon-font CDN). -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.26.8-.57v-2.2c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .31.21.68.82.56A12 12 0 0 0 12 .5Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.65h.05a4.17 4.17 0 0 1 3.75-2.06c4 0 4.75 2.63 4.75 6.06V21h-4v-5.36c0-1.28-.03-2.93-1.79-2.93-1.79 0-2.06 1.4-2.06 2.84V21h-4V9Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 6.5h18v11H3zM3 7l9 6 9-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></symbol>
+  <symbol id="i-diagonal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7l-4-4Zm0 0v4h4M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M20 14.2A8.4 8.4 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2Z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 20h4L20 8a2.8 2.8 0 0 0-4-4L4 16v4ZM14.5 5.5l4 4"/></symbol>
+</svg>
 
-        <section id="about" class="animated-section">
-            <div class="section-header">
-                <span class="section-index">01</span>
-                <h2>About Me</h2>
-                <p class="section-subtitle">Get to know the person behind the code</p>
-            </div>
-            <div class="about-content">
-                <div class="about-photo">
-                    <img src="assets/pfp.jpg" alt="Abdur Rafay" class="profile-photo" loading="lazy" decoding="async">
-                </div>
-                <div class="about-text">
-                    <h3>Hello! I'm Abdur Rafay</h3>
-                    <p>I'm an AI Engineer currently working at Lythe Labs (Singapore, Remote) building production-grade LLM applications, RAG pipelines, and multi-agent systems. I've shipped 25+ AI agents across healthcare, finance, and education domains.</p>
+<!-- ═══ Rail: vertical index on desktop, sticky bar on small screens ═══ -->
+<header class="rail" id="rail">
+  <a class="rail__brand" href="#top">
+    <img src="assets/logo.svg" alt="" width="34" height="34" fetchpriority="high" decoding="async">
+    <span class="rail__brand-text">
+      <strong>Abdur Rafay</strong>
+      <span>AI Engineer</span>
+    </span>
+  </a>
 
-                    <p>I'm pursuing my BS in Artificial Intelligence at Bahria University while working across 5+ international internships, from Cairo to Georgia, Dubai to Lahore. I thrive at the intersection of research and engineering: taking ideas from paper to production.</p>
+  <nav class="rail__nav" aria-label="Sections">
+    <ul>
+      <li><a href="#about"><span class="rail__num">01</span>About</a></li>
+      <li><a href="#skills"><span class="rail__num">02</span>Skills</a></li>
+      <li><a href="#work"><span class="rail__num">03</span>Work</a></li>
+      <li><a href="#experience"><span class="rail__num">04</span>Experience</a></li>
+      <li><a href="#credentials"><span class="rail__num">05</span>Credentials</a></li>
+      <li><a href="#writing"><span class="rail__num">06</span>Writing</a></li>
+      <li><a href="#contact"><span class="rail__num">07</span>Contact</a></li>
+    </ul>
+  </nav>
 
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>Education</h4>
-                                <p>BS Artificial Intelligence, Bahria University (2024-Present)</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Wah Cantt, Pakistan</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-brain"></i>
-                            <div>
-                                <h4>Specialization</h4>
-                                <p>LLMs, Multi-Agent Systems, RAG Pipelines</p>
-                            </div>
-                        </div>
-                    </div>
+  <div class="rail__foot">
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+      <svg class="ico ico--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="ico ico--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    </button>
+    <a class="icon-btn" href="https://github.com/Abdur-Rafay-AR" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg></a>
+    <a class="icon-btn" href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+    <a class="icon-btn" href="mailto:abdurrafay.tech@gmail.com" aria-label="Email"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></a>
+  </div>
+</header>
 
-                    <div class="about-buttons">
-                        <a href="mailto:abdurrafay.tech@gmail.com" class="btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            Let's Talk
-                        </a>
-                        <a href="https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing" class="btn-secondary" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-eye"></i>
-                            View CV
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+<div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
-        <section id="services" class="animated-section">
-            <div class="section-header">
-                <span class="section-index">02</span>
-                <h2>Services</h2>
-                <p class="section-subtitle">What I can do for you</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI/ML Development</h3>
-                    <p>Building intelligent systems using machine learning and deep learning. Experienced with LLMs, prompt engineering, fine-tuning, and working with TensorFlow and PyTorch.</p>
-                    <ul>
-                        <li>Large Language Models (LLMs)</li>
-                        <li>Prompt Engineering & Fine-tuning</li>
-                        <li>TensorFlow & PyTorch</li>
-                        <li>AI-Powered Applications</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Full-Stack Web Development</h3>
-                    <p>Creating modern web applications using Flask, Django, React, and modern frontend technologies. From backend APIs to responsive user interfaces.</p>
-                    <ul>
-                        <li>Flask & Django Backend</li>
-                        <li>React & Vite Frontend</li>
-                        <li>RESTful API Development</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-spider"></i>
-                    </div>
-                    <h3>Web Scraping & Automation</h3>
-                    <p>Expert in web scraping and automation using Python libraries like Requests, BeautifulSoup, and Selenium for data extraction and process automation.</p>
-                    <ul>
-                        <li>Python Web Scraping</li>
-                        <li>Selenium Automation</li>
-                        <li>BeautifulSoup & Requests</li>
-                        <li>Data Processing & Analysis</li>
-                    </ul>
-                </div>
-                <!-- <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Database & Backend Services</h3>
-                    <p>Designing and implementing robust database solutions with MySQL and SQL. Building scalable backend architectures and data management systems.</p>
-                    <ul>
-                        <li>MySQL & SQL Databases</li>
-                        <li>Database Design & Optimization</li>
-                        <li>Backend Architecture</li>
-                        <li>API Integration</li>
-                    </ul>
-                </div> -->
-            </div>
-        </section>
+<main id="main">
+  <!-- ═══ Hero ═══ -->
+  <section class="hero" id="top">
+    <div class="hero__grid">
+      <div class="hero__body">
+        <p class="status"><span class="status__dot"></span>Available for freelance & full-time roles</p>
 
-        <section id="skills" class="animated-section">
-            <div class="section-header">
-                <span class="section-index">03</span>
-                <h2>Technical Skills</h2>
-                <p class="section-subtitle">Technologies I work with</p>
-            </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <div class="skill-category-header" data-category="languages">
-                        <h3><i class="fas fa-code"></i> Languages</h3>
-                        <i class="fas fa-chevron-down dropdown-arrow"></i>
-                    </div>
-                    <div class="skill-items" id="languages-skills">
-                        <div class="skill-item">
-                            <img src="assets/python.svg" alt="Python" loading="lazy" decoding="async">
-                            <div class="skill-info">
-                                <h4>Python</h4>
-                                <p>Primary language for AI/ML, backend APIs, automation, and data pipelines</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/sql-database.webp" alt="SQL" loading="lazy" decoding="async">
-                            <div class="skill-info">
-                                <h4>SQL</h4>
-                                <p>Complex queries, schema design, and optimization across PostgreSQL and MySQL</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/javascript.webp" alt="JavaScript" loading="lazy" decoding="async">
-                            <div class="skill-info">
-                                <h4>JavaScript</h4>
-                                <p>Frontend scripting, async patterns, and Node.js tooling</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <h1 class="hero__title">
+          I build <em>intelligent</em> systems that survive production.
+        </h1>
 
-                <div class="skill-category">
-                    <div class="skill-category-header" data-category="ai">
-                        <h3><i class="fas fa-brain"></i> AI & LLMs</h3>
-                        <i class="fas fa-chevron-down dropdown-arrow"></i>
-                    </div>
-                    <div class="skill-items" id="ai-skills">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-link" aria-hidden="true"></i></div>
-                            <div class="skill-info">
-                                <h4>LangChain</h4>
-                                <p>Building agentic pipelines, RAG systems, and tool-augmented LLM applications</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-face-smile" aria-hidden="true"></i></div>
-                            <div class="skill-info">
-                                <h4>Hugging Face</h4>
-                                <p>Sentence Transformers, embeddings, and open-source model fine-tuning</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/tensorflow.webp" alt="TensorFlow" loading="lazy" decoding="async">
-                            <div class="skill-info">
-                                <h4>TensorFlow & PyTorch</h4>
-                                <p>Deep learning, CNNs, LSTMs, and classical ML with Scikit-learn/XGBoost</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
-                            <div class="skill-info">
-                                <h4>LLM APIs</h4>
-                                <p>OpenAI, Anthropic Claude, Groq, Gemini: prompt engineering and fine-tuning</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-diagram-project" aria-hidden="true"></i></div>
-                            <div class="skill-info">
-                                <h4>RAG & Multi-Agent Systems</h4>
-                                <p>Production RAG pipelines, vector search, and orchestrated multi-agent workflows</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <p class="hero__lede">
+          I'm Abdur Rafay — an AI Engineer at <strong>Lythe Labs</strong> (Singapore, remote).
+          I take LLM ideas from paper to production: RAG pipelines, multi-agent
+          workflows and the unglamorous plumbing that keeps them reliable.
+          <span class="hero__lede-sub">25+ AI agents shipped across healthcare, finance and education.</span>
+        </p>
 
-                <div class="skill-category">
-                    <div class="skill-category-header" data-category="backend">
-                        <h3><i class="fas fa-server"></i> Backend & APIs</h3>
-                        <i class="fas fa-chevron-down dropdown-arrow"></i>
-                    </div>
-                    <div class="skill-items" id="backend-skills">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div>
-                            <div class="skill-info">
-                                <h4>FastAPI</h4>
-                                <p>High-performance async REST APIs for AI services and data pipelines</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/flask.webp" alt="Flask" loading="lazy" decoding="async">
-                            <div class="skill-info">
-                                <h4>Flask & Streamlit</h4>
-                                <p>Lightweight APIs and rapid AI/data app prototyping and deployment</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/vite-react.webp" alt="React" loading="lazy" decoding="async">
-                            <div class="skill-info">
-                                <h4>React / Vite</h4>
-                                <p>Modern frontend development with fast builds and component-driven UIs</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-header" data-category="data">
-                        <h3><i class="fas fa-database"></i> Databases & DevOps</h3>
-                        <i class="fas fa-chevron-down dropdown-arrow"></i>
-                    </div>
-                    <div class="skill-items" id="data-skills">
-                        <div class="skill-item">
-                            <img src="assets/mysql.webp" alt="PostgreSQL" loading="lazy" decoding="async">
-                            <div class="skill-info">
-                                <h4>PostgreSQL & MySQL</h4>
-                                <p>Relational databases: schema design, indexing, and analytical queries</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database" aria-hidden="true"></i></div>
-                            <div class="skill-info">
-                                <h4>ChromaDB</h4>
-                                <p>Vector database for embedding storage and semantic similarity search in RAG systems</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-docker" aria-hidden="true"></i></div>
-                            <div class="skill-info">
-                                <h4>Docker & Git</h4>
-                                <p>Containerised deployments, CI/CD pipelines, and version control workflows</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="animated-section">
-            <div class="section-header">
-                <span class="section-index">04</span>
-                <h2>Experience & Education</h2>
-                <p class="section-subtitle">My journey so far</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Agent Engineer</h3>
-                        <h4>Lythe Labs <span class="timeline-location">· Singapore (Remote)</span></h4>
-                        <span class="timeline-date">Mar 2026 – Present</span>
-                        <p>Building production-grade AI agents and multi-agent systems at a stealth-stage AI startup. Architecting LLM pipelines, RAG systems, and autonomous agent workflows deployed across multiple domains.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>AI Intern</h3>
-                        <h4>School of AI <span class="timeline-location">· Georgia, USA (Remote)</span></h4>
-                        <span class="timeline-date">Jan 2026 – Mar 2026</span>
-                        <p>Developed and fine-tuned LLM-based applications, contributed to curriculum content on prompt engineering and agent design, and collaborated with a global team of AI researchers and engineers.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>AI Intern</h3>
-                        <h4>AABS <span class="timeline-location">· Lahore, Pakistan</span></h4>
-                        <span class="timeline-date">Nov 2025 – Jan 2026</span>
-                        <p>Built RAG pipelines and LLM-powered automation tools for internal business workflows. Worked with ChromaDB, LangChain, and FastAPI to deliver measurable efficiency improvements.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>ML Intern</h3>
-                        <h4>Elevvo Pathways <span class="timeline-location">· Cairo, Egypt (Remote)</span></h4>
-                        <span class="timeline-date">Sep 2025</span>
-                        <p>Applied machine learning models to learning pathway personalisation. Implemented Scikit-learn and XGBoost pipelines for recommendation and classification tasks on educational data.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Data Analyst Intern</h3>
-                        <h4>Excelerate <span class="timeline-location">· Dubai, UAE (Remote)</span></h4>
-                        <span class="timeline-date">Aug 2025 – Sep 2025</span>
-                        <p>Performed data analysis and reporting using SQL and Python. Built dashboards and automated data pipelines to surface actionable insights for business stakeholders.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Data Science Intern</h3>
-                        <h4>Securely Innovations <span class="timeline-location">· Islamabad, Pakistan</span></h4>
-                        <span class="timeline-date">Sep 2024 – Nov 2024</span>
-                        <p>Developed ML models for cybersecurity data analysis. Built anomaly detection pipelines using Python, Pandas, and Scikit-learn to identify patterns in security event logs.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>BS Artificial Intelligence</h3>
-                        <h4>Bahria University <span class="timeline-location">· Pakistan</span></h4>
-                        <span class="timeline-date">2024 – Present</span>
-                        <p>Studying AI fundamentals through to advanced deep learning, NLP, computer vision, and intelligent systems design alongside real-world engineering work.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="animated-section">
-            <div class="section-header">
-                <span class="section-index">05</span>
-                <h2>Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
-            </div>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="ai">AI/ML</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="automation">Automation</button>
-            </div>
-            <div class="projects-container">
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Long-Running Autonomous Agent</h3>
-                            <span class="project-status">Open Source</span>
-                        </div>
-                        <p>Self-hosted AI agent capable of running autonomously for days or weeks. Uses LLM-driven planning loops, sandboxed Python execution, persistent memory, and resumable sessions via API control. Structured planning minimises hallucination rates.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">LLMs</span>
-                            <span class="tech-tag">FastAPI</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/long-running-autonomous-agent" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>ai-cache</h3>
-                            <span class="project-status">Open Source</span>
-                        </div>
-                        <p>Open-source Python library that automatically caches LLM API responses across OpenAI, Anthropic Claude, and Google Gemini. Cuts repeated API costs and improves latency for SQL and NLP query workloads.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">Anthropic</span>
-                            <span class="tech-tag">Gemini</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/ai-cache" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Agent Testing Suite</h3>
-                            <span class="project-status">Open Source</span>
-                        </div>
-                        <p>Dashboard for evaluating multi-agent AI pipelines. Tracks latency, API cost, and tool call frequency with interactive flow visualisation, enabling data-driven agent optimisation and debugging.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Multi-Agent</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">Streamlit</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/agent-testing-suite" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>runelog</h3>
-                            <span class="project-status">Open Source</span>
-                        </div>
-                        <p>Lightweight, zero-dependency Python library for reproducible ML experimentation and run tracking. File-system based, similar to MLflow but with no server setup, no config, and instant local use.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">MLOps</span>
-                            <span class="tech-tag">Experiment Tracking</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/runelog" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Stock Market Predictor</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>LSTM-based stock price forecasting app built with PyTorch and Streamlit. Pulls real-time data from Yahoo Finance with customisable ticker inputs and interactive chart visualisations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">LSTM</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Yahoo Finance</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/stock-market-predictor" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Plant Disease Classifier</h3>
-                            <span class="project-status">Completed</span>
-                        </div>
-                        <p>CNN model trained on 38 plant disease classes across multiple crops, deployed as a Streamlit web app. Upload a leaf image and get instant disease detection with class probability scores using TensorFlow.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">CNN</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Computer Vision</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Abdur-Rafay-AR/plant-disease-classifier" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="articles" class="animated-section">
-            <div class="section-header">
-            <span class="section-index">06</span>
-            <h2>Latest Articles</h2>
-            <p class="section-subtitle">Thoughts and insights on AI, development, and technology</p>
-            </div>
-            <div class="articles-container">
-            <a class="article-card" href="https://medium.com/@abdurrafay432007/my-journey-into-ethical-web-scraping-with-python-️-4b5f8b48de10" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener">
-                <div class="article-image">
-                <img src="assets/article1.jpg" alt="Illustration of a web page linked to the Python logo" width="1024" height="541" loading="lazy" decoding="async">
-                </div>
-                <div class="article-content">
-                <div class="article-category">Web Scraping</div>
-                <h3>My Journey into Ethical Web Scraping with Python</h3>
-                <p>Best practices for responsible web scraping, including respecting robots.txt, rate limiting, and legal considerations when extracting data from websites.</p>
-                </div>
-            </a>
-            <a class="article-card" href="https://medium.com/@abdurrafay432007/what-i-learned-about-rag-models-as-an-ai-intern-real-world-lessons-from-a-startup-360890d3c281" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener">
-                <div class="article-image">
-                <img src="assets/article2.jpg" alt="Digital brain connecting document retrieval and text generation" width="1024" height="519" loading="lazy" decoding="async">
-                </div>
-                <div class="article-content">
-                <div class="article-category">AI & Machine Learning</div>
-                <h3>What I Learned About RAG Models as an AI Intern (Real-World Lessons from a Startup)</h3>
-                <p>An overview of practical lessons learned while implementing Retrieval-Augmented Generation (RAG) systems in a startup environment, highlighting how retrieval quality, data preprocessing, and system design impact the performance and reliability of LLM-based applications.</p>
-                </div>
-            </a>
-            </div>
-        </section>
-
-        <section id="certificates" class="animated-section">
-            <div class="section-header">
-                <span class="section-index">07</span>
-                <h2>Certifications & Achievements</h2>
-                <p class="section-subtitle">Professional certifications and course completions</p>
-            </div>
-            <div class="certificates-container">
-                <!-- Certificate Card Template - Replace with your actual certificates -->
-                <div class="certificate-card">
-                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" target="_blank" rel="noopener" class="certificate-image-link">
-                        <div class="certificate-image">
-                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" alt="IBM AI Developer Professional Certificate" loading="lazy" decoding="async">
-                            <div class="certificate-overlay">
-                                <i class="fas fa-search-plus"></i>
-                                <span>View Certificate</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="certificate-content">
-                        <div class="certificate-header">
-                            <div class="certificate-icon">
-                                <i class="fas fa-certificate" aria-hidden="true"></i>
-                                <i class="fas fa-check certificate-check" aria-hidden="true"></i>
-                            </div>
-                            <div class="certificate-issuer">
-                                <span class="issuer-name">IBM</span>
-                                <span class="issue-date">Aug 20, 2025</span>
-                            </div>
-                        </div>
-                        <h3>IBM AI Developer</h3>
-                        <p>This comprehensive professional certificate program covers the complete journey of AI-powered software development. It includes foundational knowledge in software engineering, artificial intelligence, and generative AI, progressing through practical application development using Python, Flask, HTML, CSS, and JavaScript.</p>
-                        <div class="certificate-footer">
-                            <a href="https://www.coursera.org/account/accomplishments/professional-cert/0YJ2CQKBA37C" target="_blank" rel="noopener" class="verify-btn">
-                                <i class="fas fa-check-circle"></i>
-                                Verify Certificate
-                            </a>
-                            <div class="certificate-tags">
-                                <span class="tag">Generative AI Development</span>
-                                <span class="tag">Full-Stack Web Development</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more certificate cards as needed -->
-                <div class="certificate-card">
-                    <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" target="_blank" rel="noopener" class="certificate-image-link">
-                        <div class="certificate-image">
-                            <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" alt="NVIDIA AI Infrastructure and Operations Fundamentals certificate" loading="lazy" decoding="async">
-                            <div class="certificate-overlay">
-                                <i class="fas fa-search-plus"></i>
-                                <span>View Certificate</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="certificate-content">
-                        <div class="certificate-header">
-                            <div class="certificate-icon">
-                                <i class="fas fa-certificate" aria-hidden="true"></i>
-                                <i class="fas fa-check certificate-check" aria-hidden="true"></i>
-                            </div>
-                            <div class="certificate-issuer">
-                                <span class="issuer-name">NVIDIA</span>
-                                <span class="issue-date">Jul 15, 2025</span>
-                            </div>
-                        </div>
-                        <h3>AI Infrastructure and Operations Fundamentals</h3>
-                        <p>This NVIDIA course provides foundational knowledge in AI infrastructure and operations management. It covers the essential concepts, tools, and best practices for deploying, managing, and operating AI systems at scale, focusing on the technical infrastructure required to support AI workloads effectively.</p>
-                        <div class="certificate-footer">
-                            <a href="https://www.coursera.org/account/accomplishments/verify/3A1AWFG3ZHZ0" target="_blank" rel="noopener" class="verify-btn">
-                                <i class="fas fa-check-circle"></i>
-                                Verify Certificate
-                            </a>
-                            <div class="certificate-tags">
-                                <span class="tag">AI Infrastructure Management</span>
-                                <span class="tag">AI Operations & Deployment</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="hire" class="animated-section upwork-cta-section">
-            <div class="upwork-cta-inner">
-                <div class="upwork-cta-text">
-                    <span class="upwork-available-badge"><span class="available-dot"></span>Available for freelance</span>
-                    <h2>Need an AI Engineer?</h2>
-                    <p>I take on freelance projects through Upwork: LLM apps, RAG pipelines, multi-agent systems, and AI integrations. Let's build something together.</p>
-                </div>
-                <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" rel="noopener" class="upwork-cta-btn">
-                    <img src="assets/upwork-light.png" class="upwork-icon light" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                    <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                    Hire Me on Upwork
-                </a>
-            </div>
-        </section>
-
-        <section id="contact" class="animated-section">
-            <div class="section-header">
-                <span class="section-index">08</span>
-                <h2>Get In Touch</h2>
-                <p class="section-subtitle">Let's connect and discuss opportunities</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <a href="mailto:abdurrafay.tech@gmail.com">abdurrafay.tech@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>Wah Cantt, Pakistan</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                            <div class="contact-text">
-                                <h4>Response Time</h4>
-                                <p>Within 24 hours</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <h4>Follow Me</h4>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/Abdur-Rafay-AR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
-                                <img src="assets/upwork-light.png" class="upwork-icon light" alt="Upwork" loading="lazy" decoding="async">
-                                <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="Upwork" loading="lazy" decoding="async">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Abdur Rafay. All rights reserved.</p>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/Abdur-Rafay-AR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
-                    <img src="assets/upwork-light.png" class="upwork-icon light" alt="Upwork" loading="lazy" decoding="async">
-                    <img src="assets/upwork-dark.png" class="upwork-icon dark" alt="Upwork" loading="lazy" decoding="async">
-                </a>
-            </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">
+            See selected work
+            <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="btn" href="mailto:abdurrafay.tech@gmail.com">
+            <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+            Get in touch
+          </a>
+          <a class="btn btn--quiet" href="https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing" target="_blank" rel="noopener">
+            <svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>
+            Résumé
+          </a>
         </div>
-    </footer>
 
-    <script src="script.js" defer></script>
+        <ul class="hero__social" aria-label="Profiles">
+          <li><a href="https://github.com/Abdur-Rafay-AR" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" rel="noopener"><span class="upwork" aria-hidden="true"></span>Upwork</a></li>
+          <li><a href="https://medium.com/@abdurrafay432007" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg>Medium</a></li>
+        </ul>
+      </div>
+
+      <figure class="hero__portrait">
+        <img src="assets/pfp.jpg" alt="Abdur Rafay" width="638" height="689" fetchpriority="high" decoding="async">
+        <figcaption>
+          <span>Wah Cantt, Pakistan</span>
+          <span>UTC+5 · replies within 24h</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <dl class="facts" aria-label="At a glance">
+      <div><dt>Now</dt><dd>Agent Engineer, Lythe Labs</dd></div>
+      <div><dt>Focus</dt><dd>LLM apps · RAG · Multi-agent</dd></div>
+      <div><dt>Core stack</dt><dd>Python · LangChain · FastAPI</dd></div>
+      <div><dt>Studying</dt><dd>BS Artificial Intelligence</dd></div>
+    </dl>
+  </section>
+
+  <!-- ═══ 01 About ═══ -->
+  <section class="section reveal" id="about">
+    <div class="section__head">
+      <span class="eyebrow">01 — About</span>
+      <h2 class="section__title">Research instincts, engineering discipline.</h2>
+    </div>
+
+    <div class="about">
+      <div class="about__prose">
+        <p class="lead">
+          I sit where the model meets the system. Most AI work fails not at the prompt but at
+          everything around it — retrieval quality, evaluation, cost, latency, and what happens
+          when a run breaks at 3am. That boundary is where I spend my time.
+        </p>
+        <p>
+          At Lythe Labs I architect production-grade agents and multi-agent systems: planning
+          loops, tool use, persistent memory and RAG pipelines deployed across healthcare,
+          finance and education. Before that, five international internships — Cairo, Georgia,
+          Dubai, Islamabad, Lahore — taught me how differently teams define "done".
+        </p>
+        <p>
+          I'm pursuing a BS in Artificial Intelligence at Bahria University alongside the work,
+          and I publish what I learn: open-source libraries for caching LLM calls, tracking
+          experiments and evaluating agent pipelines. If a tool I need doesn't exist, I build
+          and release it.
+        </p>
+      </div>
+
+      <div class="about__aside">
+        <h3 class="micro-title">What I take on</h3>
+        <ul class="offer">
+          <li>
+            <h4>AI &amp; LLM engineering</h4>
+            <p>Agentic pipelines, RAG systems, prompt engineering and fine-tuning, evaluation harnesses, TensorFlow &amp; PyTorch modelling.</p>
+          </li>
+          <li>
+            <h4>Full-stack delivery</h4>
+            <p>FastAPI, Flask and Django backends, React &amp; Vite frontends, REST APIs, containerised deployment.</p>
+          </li>
+          <li>
+            <h4>Scraping &amp; automation</h4>
+            <p>Requests, BeautifulSoup and Selenium pipelines for data extraction, processing and process automation.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 02 Skills ═══ -->
+  <section class="section reveal" id="skills">
+    <div class="section__head">
+      <span class="eyebrow">02 — Skills</span>
+      <h2 class="section__title">The toolkit, grouped by what it's for.</h2>
+      <p class="section__note">Everything listed is something I've shipped with, not just read about.</p>
+    </div>
+
+    <div class="skills">
+      <article class="skillset">
+        <h3>Languages</h3>
+        <ul>
+          <li><span class="skill__name">Python</span><span class="skill__note">AI/ML, backend APIs, automation, data pipelines</span></li>
+          <li><span class="skill__name">SQL</span><span class="skill__note">Complex queries, schema design, optimisation</span></li>
+          <li><span class="skill__name">JavaScript</span><span class="skill__note">Frontend scripting, async patterns, Node tooling</span></li>
+          <li><span class="skill__name">C++</span><span class="skill__note">Systems fundamentals, SFML graphics work</span></li>
+        </ul>
+      </article>
+
+      <article class="skillset skillset--wide">
+        <h3>AI &amp; LLMs</h3>
+        <ul>
+          <li><span class="skill__name">LangChain</span><span class="skill__note">Agentic pipelines, RAG systems, tool-augmented apps</span></li>
+          <li><span class="skill__name">LLM APIs</span><span class="skill__note">OpenAI, Anthropic Claude, Groq, Gemini</span></li>
+          <li><span class="skill__name">RAG &amp; multi-agent</span><span class="skill__note">Vector search, orchestration, evaluation</span></li>
+          <li><span class="skill__name">Hugging Face</span><span class="skill__note">Sentence Transformers, embeddings, fine-tuning</span></li>
+          <li><span class="skill__name">TensorFlow &amp; PyTorch</span><span class="skill__note">CNNs, LSTMs, deep learning training loops</span></li>
+          <li><span class="skill__name">Scikit-learn &amp; XGBoost</span><span class="skill__note">Classical ML, classification, recommendation</span></li>
+        </ul>
+      </article>
+
+      <article class="skillset">
+        <h3>Backend &amp; web</h3>
+        <ul>
+          <li><span class="skill__name">FastAPI</span><span class="skill__note">Async REST services for AI workloads</span></li>
+          <li><span class="skill__name">Flask &amp; Django</span><span class="skill__note">Lightweight APIs and full web applications</span></li>
+          <li><span class="skill__name">React &amp; Vite</span><span class="skill__note">Component-driven UIs, fast builds</span></li>
+          <li><span class="skill__name">Streamlit</span><span class="skill__note">Rapid AI/data app prototyping</span></li>
+        </ul>
+      </article>
+
+      <article class="skillset">
+        <h3>Data</h3>
+        <ul>
+          <li><span class="skill__name">PostgreSQL &amp; MySQL</span><span class="skill__note">Schema design, indexing, analytical queries</span></li>
+          <li><span class="skill__name">ChromaDB</span><span class="skill__note">Embedding storage, semantic search for RAG</span></li>
+          <li><span class="skill__name">Pandas &amp; NumPy</span><span class="skill__note">Analysis, feature work, reporting pipelines</span></li>
+        </ul>
+      </article>
+
+      <article class="skillset">
+        <h3>Platform &amp; tools</h3>
+        <ul>
+          <li><span class="skill__name">Docker</span><span class="skill__note">Containerised deployment of services</span></li>
+          <li><span class="skill__name">Git &amp; CI/CD</span><span class="skill__note">Version control and automated pipelines</span></li>
+          <li><span class="skill__name">Selenium &amp; BeautifulSoup</span><span class="skill__note">Scraping and browser automation</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══ 03 Work ═══ -->
+  <section class="section reveal" id="work">
+    <div class="section__head">
+      <span class="eyebrow">03 — Selected work</span>
+      <h2 class="section__title">Three problems worth explaining.</h2>
+      <p class="section__note">All open source. Code linked on every entry.</p>
+    </div>
+
+    <ol class="cases">
+      <li class="case">
+        <div class="case__index">
+          <span class="case__num">01</span>
+          <span class="tag tag--accent">Open source</span>
+        </div>
+        <div class="case__main">
+          <h3 class="case__title">Long-Running Autonomous Agent</h3>
+          <p class="case__summary">
+            A self-hosted AI agent that keeps working autonomously for days or weeks at a time,
+            rather than for a single conversation.
+          </p>
+          <dl class="case__detail">
+            <div><dt>Role</dt><dd>Sole author — architecture, implementation, docs.</dd></div>
+            <div><dt>Problem</dt><dd>Long-horizon agents drift off task and hallucinate steps, and a crashed process usually means starting the whole run again.</dd></div>
+            <div><dt>Approach</dt><dd>An LLM-driven planning loop with explicit, inspectable plan state; sandboxed Python execution for tool use; persistent memory across steps; and resumable sessions controlled through an API surface.</dd></div>
+            <div><dt>Outcome</dt><dd>Runs unattended over multi-day horizons, structured planning keeps hallucinated steps down, and interrupted sessions resume instead of restarting.</dd></div>
+          </dl>
+          <ul class="stack"><li>Python</li><li>LangChain</li><li>LLMs</li><li>FastAPI</li></ul>
+          <div class="case__links">
+            <a class="link-out" href="https://github.com/Abdur-Rafay-AR/long-running-autonomous-agent" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source
+              <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="case">
+        <div class="case__index">
+          <span class="case__num">02</span>
+          <span class="tag tag--accent">Open source</span>
+        </div>
+        <div class="case__main">
+          <h3 class="case__title">ai-cache</h3>
+          <p class="case__summary">
+            A Python library that transparently caches LLM responses across OpenAI, Anthropic
+            Claude and Google Gemini.
+          </p>
+          <dl class="case__detail">
+            <div><dt>Role</dt><dd>Sole author — library design, provider adapters, release.</dd></div>
+            <div><dt>Problem</dt><dd>Iterating on prompts re-sends near-identical requests all day. Every repeat costs money and adds seconds of latency, and each provider SDK caches differently — or not at all.</dd></div>
+            <div><dt>Approach</dt><dd>One caching layer behind a single interface, keyed on request content, so switching providers doesn't change caller code.</dd></div>
+            <div><dt>Outcome</dt><dd>Repeat calls resolve locally instead of over the network, cutting spend and latency on SQL and NLP query workloads. Published as an installable package.</dd></div>
+          </dl>
+          <ul class="stack"><li>Python</li><li>OpenAI</li><li>Anthropic</li><li>Gemini</li></ul>
+          <div class="case__links">
+            <a class="link-out" href="https://github.com/Abdur-Rafay-AR/ai-cache" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source
+              <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="case">
+        <div class="case__index">
+          <span class="case__num">03</span>
+          <span class="tag tag--accent">Open source</span>
+        </div>
+        <div class="case__main">
+          <h3 class="case__title">Agent Testing Suite</h3>
+          <p class="case__summary">
+            An evaluation dashboard that makes multi-agent pipelines legible — where time goes,
+            where money goes, which tools actually get called.
+          </p>
+          <dl class="case__detail">
+            <div><dt>Role</dt><dd>Sole author — instrumentation and dashboard.</dd></div>
+            <div><dt>Problem</dt><dd>Multi-agent systems are opaque. When a pipeline is slow or expensive, there's rarely evidence pointing at which agent or tool call is responsible.</dd></div>
+            <div><dt>Approach</dt><dd>Instrument each run for latency, API cost and tool-call frequency, then render the pipeline as an interactive flow so bottlenecks are visible rather than guessed at.</dd></div>
+            <div><dt>Outcome</dt><dd>Turns agent tuning into a data-driven exercise: regressions show up as numbers, and optimisation targets the step that's actually costing.</dd></div>
+          </dl>
+          <ul class="stack"><li>Python</li><li>Multi-agent</li><li>LangChain</li><li>Streamlit</li></ul>
+          <div class="case__links">
+            <a class="link-out" href="https://github.com/Abdur-Rafay-AR/agent-testing-suite" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source
+              <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <h3 class="micro-title micro-title--spaced">Also built</h3>
+    <ul class="mini-grid">
+      <li class="mini">
+        <div class="mini__head"><h4>runelog</h4><span class="tag">Open source</span></div>
+        <p>Zero-dependency Python library for reproducible ML experimentation. Filesystem-based run tracking — MLflow's usefulness without the server, config or setup.</p>
+        <ul class="stack"><li>Python</li><li>MLOps</li><li>Experiment tracking</li></ul>
+        <a class="link-out" href="https://github.com/Abdur-Rafay-AR/runelog" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+      </li>
+      <li class="mini">
+        <div class="mini__head"><h4>Stock Market Predictor</h4><span class="tag">Completed</span></div>
+        <p>LSTM price forecasting app pulling live Yahoo Finance data, with customisable tickers and interactive charts served through Streamlit.</p>
+        <ul class="stack"><li>PyTorch</li><li>LSTM</li><li>Streamlit</li></ul>
+        <a class="link-out" href="https://github.com/Abdur-Rafay-AR/stock-market-predictor" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+      </li>
+      <li class="mini">
+        <div class="mini__head"><h4>Plant Disease Classifier</h4><span class="tag">Completed</span></div>
+        <p>CNN trained across 38 plant disease classes. Upload a leaf photo and get a diagnosis with per-class probability scores in the browser.</p>
+        <ul class="stack"><li>TensorFlow</li><li>CNN</li><li>Computer vision</li></ul>
+        <a class="link-out" href="https://github.com/Abdur-Rafay-AR/plant-disease-classifier" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ═══ 04 Experience ═══ -->
+  <section class="section reveal" id="experience">
+    <div class="section__head">
+      <span class="eyebrow">04 — Experience</span>
+      <h2 class="section__title">Six roles, five countries, one throughline.</h2>
+      <p class="section__note">Every role has been about turning models into things people can actually use.</p>
+    </div>
+
+    <ol class="roles">
+      <li class="role role--current">
+        <div class="role__when"><span class="role__date">Mar 2026 — Present</span><span class="role__place">Singapore · Remote</span></div>
+        <div class="role__what">
+          <h3>Agent Engineer <span class="role__org">Lythe Labs</span></h3>
+          <p>Building production-grade AI agents and multi-agent systems at a stealth-stage AI startup. Architecting LLM pipelines, RAG systems and autonomous agent workflows deployed across multiple domains.</p>
+          <ul class="stack"><li>LangChain</li><li>FastAPI</li><li>RAG</li><li>Multi-agent</li></ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="role__when"><span class="role__date">Jan — Mar 2026</span><span class="role__place">Georgia, USA · Remote</span></div>
+        <div class="role__what">
+          <h3>AI Intern <span class="role__org">School of AI</span></h3>
+          <p>Developed and fine-tuned LLM-based applications, contributed curriculum content on prompt engineering and agent design, and collaborated with a global team of AI researchers and engineers.</p>
+          <ul class="stack"><li>LLMs</li><li>Fine-tuning</li><li>Prompt engineering</li></ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="role__when"><span class="role__date">Nov 2025 — Jan 2026</span><span class="role__place">Lahore, Pakistan</span></div>
+        <div class="role__what">
+          <h3>AI Intern <span class="role__org">AABS</span></h3>
+          <p>Built RAG pipelines and LLM-powered automation for internal business workflows, delivering measurable efficiency improvements to processes that had been manual.</p>
+          <ul class="stack"><li>ChromaDB</li><li>LangChain</li><li>FastAPI</li></ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="role__when"><span class="role__date">Sep 2025</span><span class="role__place">Cairo, Egypt · Remote</span></div>
+        <div class="role__what">
+          <h3>ML Intern <span class="role__org">Elevvo Pathways</span></h3>
+          <p>Applied machine learning to learning-pathway personalisation, implementing recommendation and classification pipelines over educational data.</p>
+          <ul class="stack"><li>Scikit-learn</li><li>XGBoost</li><li>Python</li></ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="role__when"><span class="role__date">Aug — Sep 2025</span><span class="role__place">Dubai, UAE · Remote</span></div>
+        <div class="role__what">
+          <h3>Data Analyst Intern <span class="role__org">Excelerate</span></h3>
+          <p>Analysis and reporting in SQL and Python. Built dashboards and automated data pipelines that surfaced actionable insight for business stakeholders.</p>
+          <ul class="stack"><li>SQL</li><li>Pandas</li><li>Dashboards</li></ul>
+        </div>
+      </li>
+      <li class="role">
+        <div class="role__when"><span class="role__date">Sep — Nov 2024</span><span class="role__place">Islamabad, Pakistan</span></div>
+        <div class="role__what">
+          <h3>Data Science Intern <span class="role__org">Securely Innovations</span></h3>
+          <p>Developed ML models for cybersecurity data, building anomaly-detection pipelines to find patterns in security event logs.</p>
+          <ul class="stack"><li>Anomaly detection</li><li>Pandas</li><li>Scikit-learn</li></ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ═══ 05 Credentials ═══ -->
+  <section class="section reveal" id="credentials">
+    <div class="section__head">
+      <span class="eyebrow">05 — Credentials</span>
+      <h2 class="section__title">Education &amp; certifications.</h2>
+    </div>
+
+    <div class="credentials">
+      <article class="edu">
+        <h3 class="micro-title">Education</h3>
+        <div class="edu__item">
+          <h4>BS Artificial Intelligence</h4>
+          <p class="edu__org">Bahria University, Pakistan <span>·</span> 2024 — Present</p>
+          <p>AI fundamentals through to deep learning, NLP, computer vision and intelligent systems design, studied alongside full-time engineering work.</p>
+        </div>
+      </article>
+
+      <article class="certs">
+        <h3 class="micro-title">Certifications</h3>
+        <ul>
+          <li class="cert">
+            <a class="cert__thumb" href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" target="_blank" rel="noopener" aria-label="View IBM AI Developer certificate">
+              <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C/CERTIFICATE_LANDING_PAGE~0YJ2CQKBA37C.jpeg" alt="IBM AI Developer Professional Certificate" width="480" height="270" loading="lazy" decoding="async">
+            </a>
+            <div class="cert__body">
+              <p class="cert__meta"><span class="cert__issuer">IBM</span><span>Aug 20, 2025</span></p>
+              <h4>AI Developer — Professional Certificate</h4>
+              <p>Full journey of AI-powered software development: software engineering and generative AI foundations through to building applications with Python, Flask and modern web technologies.</p>
+              <p class="cert__tags"><span class="tag">Generative AI</span><span class="tag">Full-stack</span></p>
+              <a class="link-out" href="https://www.coursera.org/account/accomplishments/professional-cert/0YJ2CQKBA37C" target="_blank" rel="noopener">
+                <svg class="ico ico--sm" aria-hidden="true"><use href="#i-check"/></svg>Verify
+                <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg>
+              </a>
+            </div>
+          </li>
+          <li class="cert">
+            <a class="cert__thumb" href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" target="_blank" rel="noopener" aria-label="View NVIDIA AI Infrastructure certificate">
+              <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0/CERTIFICATE_LANDING_PAGE~3A1AWFG3ZHZ0.jpeg" alt="NVIDIA AI Infrastructure and Operations Fundamentals certificate" width="480" height="270" loading="lazy" decoding="async">
+            </a>
+            <div class="cert__body">
+              <p class="cert__meta"><span class="cert__issuer">NVIDIA</span><span>Jul 15, 2025</span></p>
+              <h4>AI Infrastructure &amp; Operations Fundamentals</h4>
+              <p>Concepts, tooling and practice for deploying, managing and operating AI systems at scale — the infrastructure side of supporting AI workloads.</p>
+              <p class="cert__tags"><span class="tag">AI infrastructure</span><span class="tag">Operations</span></p>
+              <a class="link-out" href="https://www.coursera.org/account/accomplishments/verify/3A1AWFG3ZHZ0" target="_blank" rel="noopener">
+                <svg class="ico ico--sm" aria-hidden="true"><use href="#i-check"/></svg>Verify
+                <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══ 06 Writing ═══ -->
+  <section class="section reveal" id="writing">
+    <div class="section__head">
+      <span class="eyebrow">06 — Writing</span>
+      <h2 class="section__title">Notes from the work.</h2>
+    </div>
+
+    <ul class="articles">
+      <li>
+        <a href="https://medium.com/@abdurrafay432007/what-i-learned-about-rag-models-as-an-ai-intern-real-world-lessons-from-a-startup-360890d3c281" target="_blank" rel="noopener">
+          <img src="assets/article2.jpg" alt="" width="1024" height="519" loading="lazy" decoding="async">
+          <div>
+            <p class="article__cat">AI &amp; machine learning</p>
+            <h3>What I learned about RAG models as an AI intern</h3>
+            <p>Practical lessons from implementing retrieval-augmented generation in a startup: how retrieval quality, preprocessing and system design decide whether an LLM app is reliable.</p>
+            <span class="link-out">Read on Medium<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/@abdurrafay432007/my-journey-into-ethical-web-scraping-with-python-️-4b5f8b48de10" target="_blank" rel="noopener">
+          <img src="assets/article1.jpg" alt="" width="1024" height="541" loading="lazy" decoding="async">
+          <div>
+            <p class="article__cat">Web scraping</p>
+            <h3>My journey into ethical web scraping with Python</h3>
+            <p>Respecting robots.txt, rate limiting and the legal considerations that separate responsible data collection from the kind that gets you blocked.</p>
+            <span class="link-out">Read on Medium<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ═══ 07 Contact ═══ -->
+  <section class="section section--contact reveal" id="contact">
+    <div class="section__head">
+      <span class="eyebrow">07 — Contact</span>
+      <h2 class="section__title">Let's build something that ships.</h2>
+    </div>
+
+    <div class="contact">
+      <div class="contact__pitch">
+        <p class="lead">
+          Open to full-time AI engineering roles and freelance work — LLM apps, RAG pipelines,
+          multi-agent systems and AI integrations. Tell me what you're building.
+        </p>
+        <a class="mailto" href="mailto:abdurrafay.tech@gmail.com">
+          abdurrafay.tech@gmail.com
+          <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <p class="status"><span class="status__dot"></span>Currently available · replies within 24 hours</p>
+      </div>
+
+      <div class="contact__meta">
+        <dl class="facts facts--stacked">
+          <div><dt>Location</dt><dd>Wah Cantt, Pakistan (UTC+5)</dd></div>
+          <div><dt>Résumé</dt><dd><a href="https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing" target="_blank" rel="noopener">View CV <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a></dd></div>
+        </dl>
+        <ul class="contact__links">
+          <li><a href="https://github.com/Abdur-Rafay-AR" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>GitHub<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/abdur-rafay-705416326/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
+          <li><a href="https://www.upwork.com/freelancers/~01e0e53ea3fc415198" target="_blank" rel="noopener"><span class="upwork" aria-hidden="true"></span>Hire me on Upwork<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
+          <li><a href="https://medium.com/@abdurrafay432007" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg>Medium<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>&copy; 2026 Abdur Rafay</p>
+    <p>Built from scratch — no framework, no template.</p>
+    <a href="#top">Back to top <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </footer>
+</main>
+
+<script src="script.js" defer></script>
 </body>
 </html>
