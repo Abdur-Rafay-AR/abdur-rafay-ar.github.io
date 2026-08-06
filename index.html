@@ -39,12 +39,27 @@
 <link rel="stylesheet" href="style.css">
 
 <script>
-  /* Set theme before first paint to avoid a flash of the wrong palette. */
-  try {
-    var t = localStorage.getItem('theme');
-    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', t);
-  } catch (e) {}
+  /* Runs before first paint: sets the theme so the palette never flashes,
+     and holds the intro animation until the webfonts are ready so the
+     headline doesn't swap typeface mid-fade. Every path clears the hold,
+     including a hard 1.2s cap, so content can never stay hidden. */
+  (function () {
+    var el = document.documentElement;
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      el.setAttribute('data-theme', t);
+    } catch (e) {}
+
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    el.classList.add('is-loading');
+    var done = function () { el.classList.remove('is-loading'); };
+    setTimeout(done, 1200);
+    addEventListener('load', done);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(done);
+    else addEventListener('DOMContentLoaded', done);
+  })();
 </script>
 
 <script type="application/ld+json">
@@ -151,7 +166,7 @@
             <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
             Get in touch
           </a>
-          <a class="btn btn--quiet" href="https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing" target="_blank" rel="noopener">
+          <a class="btn btn--quiet" href="resume/" target="_blank" rel="noopener">
             <svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg>
             Résumé
           </a>
@@ -640,7 +655,7 @@
       <div class="contact__meta">
         <dl class="facts facts--stacked">
           <div><dt>Location</dt><dd>Islamabad, Pakistan (UTC+5)</dd></div>
-          <div><dt>Résumé</dt><dd><a href="https://drive.google.com/file/d/1kVlR_3qRCsyqr7kmWd1cKSjcBkY2ksB6/view?usp=sharing" target="_blank" rel="noopener">View CV <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a></dd></div>
+          <div><dt>Résumé</dt><dd><a href="resume/" target="_blank" rel="noopener">View CV <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a></dd></div>
         </dl>
         <ul class="contact__links">
           <li><a href="https://github.com/Abdur-Rafay-AR" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>GitHub<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a></li>
