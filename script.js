@@ -1,5 +1,5 @@
 /* ============================================================
-   Abdur Rafay — portfolio behaviour
+   Abdur Rafay, portfolio behaviour
    Four small jobs, no dependencies:
      1. theme toggle (persisted)
      2. scroll spy for the rail
@@ -22,7 +22,7 @@
       toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
     }
     const meta = document.querySelector('meta[name="theme-color"]:not([media])');
-    if (meta) meta.content = theme === 'dark' ? '#08090a' : '#fbfbfa';
+    if (meta) meta.content = theme === 'dark' ? '#08090a' : '#f4f3ef';
   };
 
   applyTheme(root.getAttribute('data-theme') || 'dark');

@@ -1,5 +1,5 @@
 /* ============================================================
-   Abdur Rafay — portfolio
+   Abdur Rafay, portfolio
    1.  Tokens
    2.  Reset & base
    3.  Primitives (buttons, tags, links, icons, eyebrow)
@@ -13,7 +13,7 @@
 
 /* ── 1. Tokens ─────────────────────────────────────────────── */
 :root {
-  /* Brand green — kept, but used as a signal, never as decoration. */
+  /* Brand green: kept, but used as a signal, never as decoration. */
   --green-400: #4ade80;
   --green-500: #22c55e;
   --green-600: #16a34a;
@@ -53,21 +53,23 @@
   --ease: cubic-bezier(.22, .61, .36, 1);
 }
 
+/* Light is warm paper, not white: no pure #fff anywhere, softened ink,
+   so long reading sessions don't glare. */
 [data-theme="light"] {
-  --bg:         #fbfbfa;
-  --bg-sunk:    #f2f2f0;
-  --surface:    #ffffff;
-  --surface-2:  #f6f6f4;
-  --line:       rgba(15, 20, 17, .10);
-  --line-bold:  rgba(15, 20, 17, .22);
-  --text:       #101312;
-  --text-2:     #575d59;
-  --text-3:     #6c726e;
+  --bg:         #f4f3ef;
+  --bg-sunk:    #eae8e2;
+  --surface:    #faf9f6;
+  --surface-2:  #efeee9;
+  --line:       rgba(26, 31, 27, .11);
+  --line-bold:  rgba(26, 31, 27, .2);
+  --text:       #232824;
+  --text-2:     #5b615c;
+  --text-3:     #656b66;
   --accent:     var(--green-700);
-  --accent-ink: var(--green-700);
-  --accent-wash:rgba(21, 128, 61, .08);
-  --on-accent:  #ffffff;
-  --shadow:     0 1px 2px rgba(16,24,20,.05), 0 14px 34px -22px rgba(16,24,20,.45);
+  --accent-ink: #196b37;
+  --accent-wash:rgba(21, 128, 61, .07);
+  --on-accent:  #f7fbf8;
+  --shadow:     0 1px 2px rgba(26,31,27,.04), 0 14px 34px -24px rgba(26,31,27,.4);
   --focus:      var(--green-700);
 }
 
@@ -471,6 +473,30 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 .facts--stacked { grid-template-columns: 1fr; margin-top: 0; }
 .facts--stacked a { color: var(--accent-ink); display: inline-flex; align-items: center; gap: .3rem; }
 
+/* Statement band: a beat between sections, not a decoration. */
+.band {
+  max-width: 1080px;
+  padding: var(--s-8) 0;
+  border-top: 1px solid var(--line);
+}
+.band p {
+  position: relative;
+  padding-left: var(--s-5);
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  max-width: 24ch;
+}
+.band p::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .2em; bottom: .2em;
+  width: 2px;
+  background: var(--accent);
+}
+.band span { color: var(--text-3); }
+
 /* ── 6a. About ─────────────────────────────────────────────── */
 .about {
   display: grid;
@@ -549,6 +575,28 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
   font-size: clamp(1.5rem, 1.2rem + 1vw, 2.05rem);
   letter-spacing: -.02em;
 }
+.case__org {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  vertical-align: middle;
+  margin-left: .5rem;
+  padding: .2rem .5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  white-space: nowrap;
+}
+.case__detail code {
+  font-family: var(--mono);
+  font-size: .85em;
+  padding: .1rem .35rem;
+  border-radius: 4px;
+  background: var(--surface-2);
+  color: var(--text);
+}
+.case__links { display: flex; flex-wrap: wrap; gap: var(--s-5); }
 .case__summary {
   margin-top: var(--s-3);
   max-width: 58ch;
@@ -632,7 +680,25 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 .role__what h3 { font-size: 1.12rem; font-weight: 600; display: flex; flex-wrap: wrap; gap: .5rem; align-items: baseline; }
 .role__org { font-family: var(--sans); font-size: .95rem; font-weight: 400; color: var(--text-2); }
 .role__org::before { content: "· "; color: var(--text-3); }
-.role__what p { margin: var(--s-2) 0 var(--s-3); font-size: .92rem; color: var(--text-2); max-width: 66ch; }
+.role__what > p { margin: var(--s-2) 0 var(--s-3); font-size: .92rem; color: var(--text); max-width: 66ch; }
+
+.bullets { display: grid; gap: .45rem; margin-bottom: var(--s-4); max-width: 70ch; }
+.bullets li {
+  position: relative;
+  padding-left: 1.05rem;
+  font-size: .89rem;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .62em;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: .65;
+}
 
 /* ── 6e. Credentials ───────────────────────────────────────── */
 .credentials {
@@ -647,39 +713,36 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 .edu__org span { color: var(--text-3); }
 .edu__item p:last-child { font-size: .9rem; color: var(--text-2); }
 
-.certs ul { margin-top: var(--s-4); display: grid; gap: var(--s-4); }
+.certs ul { margin-top: var(--s-4); display: grid; gap: var(--s-3); }
 .cert {
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
-  gap: var(--s-5);
-  padding: var(--s-5);
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: var(--s-4);
+  padding: var(--s-4) var(--s-5);
   border: 1px solid var(--line);
   border-radius: var(--r-md);
   background: var(--surface);
   transition: border-color .22s var(--ease);
 }
 .cert:hover { border-color: var(--line-bold); }
-/* aspect-ratio lives on the link so a slow or blocked remote image
-   can never resize the card. */
-.cert__thumb {
-  display: block;
-  align-self: start;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: var(--r-sm);
-  border: 1px solid var(--line);
-  background: var(--surface-2);
+.cert__mark {
+  display: grid;
+  place-items: center;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--accent-wash);
+  color: var(--accent-ink);
 }
-.cert__thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s var(--ease); }
-.cert__thumb:hover img { transform: scale(1.03); }
+.cert__mark .ico { width: 16px; height: 16px; }
+.cert__body h4 { font-size: 1.02rem; font-weight: 600; }
 .cert__meta {
-  display: flex; gap: .6rem; align-items: baseline;
-  font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; color: var(--text-3);
+  display: flex; flex-wrap: wrap; gap: .6rem; align-items: baseline;
+  margin: .3rem 0 .45rem;
+  font-family: var(--mono); font-size: .69rem; letter-spacing: .06em; color: var(--text-3);
 }
-.cert__issuer { color: var(--accent-ink); text-transform: uppercase; letter-spacing: .12em; }
-.cert__body h4 { margin: .35rem 0 .5rem; font-size: 1.05rem; font-weight: 600; }
-.cert__body > p:nth-of-type(2) { font-size: .88rem; color: var(--text-2); max-width: 60ch; }
-.cert__tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: var(--s-3) 0; }
+.cert__issuer { color: var(--accent-ink); text-transform: uppercase; letter-spacing: .11em; }
+.cert__body > p:last-of-type { font-size: .875rem; color: var(--text-2); max-width: 62ch; }
+.cert__body .link-out { margin-top: var(--s-3); }
 
 /* ── 6f. Writing ───────────────────────────────────────────── */
 .articles { display: grid; gap: var(--s-4); }
@@ -829,7 +892,7 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
   .hero__grid { grid-template-columns: 1fr; }
   .hero__portrait { order: -1; max-width: 180px; }
   .hero__portrait img { aspect-ratio: 1 / 1; }
-  /* Location and hours repeat in Contact — no need to spend hero space on them. */
+  /* Location and hours repeat in Contact : no need to spend hero space on them. */
   .hero__portrait figcaption { display: none; }
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about, .skills { grid-template-columns: 1fr; }
@@ -845,8 +908,8 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
   .case__detail > div { grid-template-columns: 1fr; gap: .2rem; }
   .role { grid-template-columns: 1fr; gap: var(--s-3); padding-left: var(--s-4); }
   .role__when { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: var(--s-3); }
-  .cert { grid-template-columns: 1fr; }
-  .cert__thumb { max-width: 340px; }
+  .cert { padding: var(--s-4); }
+  .case__org { display: inline-block; margin: .4rem 0 0; }
   .articles > li > a { grid-template-columns: 1fr; }
   .hero__actions .btn { flex: 1 1 auto; justify-content: center; }
   .foot { flex-direction: column; align-items: flex-start; gap: var(--s-2); }
