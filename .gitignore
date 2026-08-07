@@ -29,12 +29,11 @@ yarn-error.log*
 node_modules/
 
 # Build directories
-
 dist/
 build/
 
 *.md
-/Junk
+junk/
 
 # Documentation files
 docs/
