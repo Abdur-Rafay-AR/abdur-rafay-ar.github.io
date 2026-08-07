@@ -338,7 +338,10 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 }
 
 .rail__brand { display: flex; align-items: center; gap: .7rem; }
-.rail__brand img { width: 34px; height: 34px; border-radius: 9px; }
+.rail__mark { width: 44px; height: 34px; flex: none; }
+.rail__mark--light { display: none; }
+[data-theme="light"] .rail__mark--dark { display: none; }
+[data-theme="light"] .rail__mark--light { display: block; }
 .rail__brand-text { display: flex; flex-direction: column; line-height: 1.25; }
 .rail__brand-text strong { font-size: .95rem; font-weight: 600; letter-spacing: -.01em; }
 .rail__brand-text span { font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); }

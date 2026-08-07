@@ -131,7 +131,10 @@
 <!-- ═══ Rail: vertical index on desktop, sticky bar on small screens ═══ -->
 <header class="rail" id="rail">
   <a class="rail__brand" href="#top">
-    <img src="assets/logo.svg" alt="" width="34" height="34" fetchpriority="high" decoding="async">
+    <!-- Two files, not one: the mark is stroked in fixed colours, so the theme
+         swap is a display toggle rather than a filter. Both are ~1KB. -->
+    <img class="rail__mark rail__mark--dark" src="assets/ar-mark-dark.svg" alt="" width="44" height="34" fetchpriority="high" decoding="async">
+    <img class="rail__mark rail__mark--light" src="assets/ar-mark-light.svg" alt="" width="44" height="34" decoding="async">
     <span class="rail__brand-text">
       <strong>Abdur Rafay</strong>
       <span>AI Engineer</span>
