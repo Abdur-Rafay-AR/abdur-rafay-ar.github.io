@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Abdur Rafay | AI Engineer: voice agents, multi-agent systems, infrastructure</title>
-<meta name="description" content="Abdur Rafay is a Member of Technical Staff at Lythe Labs (SF). He builds production voice agents and multi-agent systems, and owns the CI/CD and AWS infrastructure that runs them.">
+<title>Abdur Rafay | AI Engineer: voice agents &amp; agent infrastructure</title>
+<meta name="description" content="Abdur Rafay is a Member of Technical Staff at Lythe Labs (SF). He builds real-time voice agents against a sub-500ms time-to-first-audio budget, the agent infrastructure around them, and the CI/CD and AWS stack that runs it.">
 <meta name="author" content="Abdur Rafay">
 <meta name="robots" content="index, follow">
 <meta name="color-scheme" content="dark light">
@@ -18,14 +18,14 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://abdur-rafay-ar.github.io/">
 <meta property="og:title" content="Abdur Rafay | AI Engineer">
-<meta property="og:description" content="Member of Technical Staff at Lythe Labs. Production voice agents, multi-agent systems, and the CI/CD and AWS infrastructure behind them.">
+<meta property="og:description" content="Member of Technical Staff at Lythe Labs. Real-time voice agents, agent infrastructure, and the CI/CD and AWS stack behind them.">
 <meta property="og:image" content="https://abdur-rafay-ar.github.io/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Abdur Rafay, AI Engineer: I build voice agents and the infrastructure they run on">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Abdur Rafay | AI Engineer">
-<meta name="twitter:description" content="Member of Technical Staff at Lythe Labs. Production voice agents, multi-agent systems, and the infrastructure behind them.">
+<meta name="twitter:description" content="Member of Technical Staff at Lythe Labs. Real-time voice agents, agent infrastructure, and the stack behind them.">
 <meta name="twitter:image" content="https://abdur-rafay-ar.github.io/assets/og-card.png">
 <meta name="twitter:image:alt" content="Abdur Rafay, AI Engineer">
 
@@ -90,14 +90,14 @@
       "name": "Abdur Rafay",
       "url": "https://abdur-rafay-ar.github.io/",
       "jobTitle": "Member of Technical Staff",
-      "description": "AI Engineer building production voice agents, multi-agent systems, and the cloud infrastructure that runs them",
+      "description": "AI Engineer building real-time voice agents, agent infrastructure, and the cloud stack that runs them",
       "image": "https://abdur-rafay-ar.github.io/assets/pfp.jpg",
       "email": "abdurrafay.tech@gmail.com",
       "knowsLanguage": ["en", "ur"],
       "alumniOf": { "@type": "EducationalOrganization", "name": "Bahria University" },
       "worksFor": { "@type": "Organization", "name": "Lythe Labs" },
       "address": { "@type": "PostalAddress", "addressLocality": "Islamabad", "addressCountry": "PK" },
-      "knowsAbout": ["Artificial Intelligence","Voice Agents","Multi-Agent Systems","LLMs","RAG Pipelines","LangChain","Model Context Protocol","Python","FastAPI","AWS","Google Cloud","CI/CD","Docker","TensorFlow","PyTorch"],
+      "knowsAbout": ["Artificial Intelligence","Voice Agents","Real-Time Audio Streaming","Agent Infrastructure","Multi-Agent Systems","LLMs","RAG Pipelines","LangChain","Model Context Protocol","Python","FastAPI","AWS","Google Cloud","CI/CD","Docker","TensorFlow","PyTorch"],
       "sameAs": [
         "https://www.linkedin.com/in/abdur-rafay-ar/",
         "https://github.com/Abdur-Rafay-AR",
@@ -174,13 +174,14 @@
         <p class="status"><span class="status__dot"></span>Available for freelance &amp; full-time roles</p>
 
         <h1 class="hero__title">
-          I build <em>voice agents</em> and the infrastructure they run on.
+          I build <em>voice agents</em> and the agent infrastructure they run on.
         </h1>
 
         <p class="hero__lede">
           I'm Abdur Rafay, Member of Technical Staff at <strong>Lythe Labs</strong> (San Francisco, remote).
-          I ship production voice agents and multi-agent systems, and I own the CI/CD
-          pipelines and AWS stack underneath them. System design through to deployment, solo.
+          I ship production voice agents against a <strong>sub&#8209;500&nbsp;ms time-to-first-audio budget</strong>
+          &mdash; streaming ASR&nbsp;&rarr;&nbsp;LLM&nbsp;&rarr;&nbsp;TTS, client-side VAD, fully async &mdash;
+          and own the CI/CD and AWS stack underneath.
           <span class="hero__lede-sub">25+ agent systems delivered across healthcare, finance, cybersecurity &amp; education.</span>
         </p>
 
@@ -218,7 +219,7 @@
 
     <dl class="facts" aria-label="At a glance">
       <div><dt>Now</dt><dd>MTS, Lythe Labs (SF)</dd></div>
-      <div><dt>Focus</dt><dd>Voice agents · Multi-agent · RAG</dd></div>
+      <div><dt>Focus</dt><dd>Voice agents · Agent infrastructure · RAG</dd></div>
       <div><dt>Also owns</dt><dd>CI/CD · AWS · GCP</dd></div>
       <div><dt>Studying</dt><dd>BS Artificial Intelligence</dd></div>
     </dl>
@@ -239,10 +240,13 @@
           automated. I work on that whole surface, not just the model call.
         </p>
         <p>
-          At Lythe Labs I build production voice agents: voice pipelines, tool-calling agent
-          infrastructure, and a Voice Agent Starter Kit that cut integration time for new projects.
-          I also own the parts nobody volunteers for: CI/CD with automated test integration, the
-          AWS production stack, MCP server development, and test plans for telephony-side tooling.
+          At Lythe Labs I build production voice agents: real-time pipelines that stream
+          ASR&nbsp;&rarr;&nbsp;LLM&nbsp;&rarr;&nbsp;TTS over a WebSocket so audio starts playing before the
+          sentence is finished, client-side VAD to decide when a caller has actually stopped talking,
+          and the tool-calling agent infrastructure underneath. The open-source Voice Agent Starter
+          Kit came out of that work. I also own the parts nobody volunteers for: CI/CD with automated
+          test integration, the AWS production stack, MCP server development, and test plans for
+          telephony-side tooling.
         </p>
         <p>
           Before this I delivered 25+ agent systems end-to-end across healthcare, finance,
@@ -257,8 +261,12 @@
         <h3 class="micro-title">What I take on</h3>
         <ul class="offer">
           <li>
-            <h4>Voice &amp; agent engineering</h4>
-            <p>Voice pipelines, tool-calling agents, multi-agent orchestration, RAG systems, evaluation harnesses.</p>
+            <h4>Real-time voice engineering</h4>
+            <p>Streaming ASR &rarr; LLM &rarr; TTS pipelines, WebSocket audio transport, VAD and endpointing, latency budgets and telemetry.</p>
+          </li>
+          <li>
+            <h4>Agent infrastructure</h4>
+            <p>Tool-calling and multi-agent orchestration, MCP servers, memory and retrieval layers, evaluation harnesses.</p>
           </li>
           <li>
             <h4>Cloud &amp; DevOps</h4>
@@ -301,7 +309,7 @@
         <ul>
           <li><span class="skill__name">LangChain</span><span class="skill__note">Agentic pipelines, tool calling, agent-to-agent coordination</span></li>
           <li><span class="skill__name">LLM APIs</span><span class="skill__note">OpenAI, Anthropic Claude, Groq, Google Gemini</span></li>
-          <li><span class="skill__name">Voice agents</span><span class="skill__note">Voice pipelines, telephony-side tooling, latency tuning</span></li>
+          <li><span class="skill__name">Voice agents</span><span class="skill__note">Streaming ASR &rarr; LLM &rarr; TTS, WebSocket transport, VAD, latency budgets</span></li>
           <li><span class="skill__name">RAG</span><span class="skill__note">Embedding pipelines, hybrid retrieval, relevance tuning</span></li>
           <li><span class="skill__name">MCP</span><span class="skill__note">Model Context Protocol server development</span></li>
           <li><span class="skill__name">TensorFlow &amp; PyTorch</span><span class="skill__note">CNNs, deep learning training loops</span></li>
@@ -346,7 +354,7 @@
   <section class="section reveal" id="work">
     <div class="section__head">
       <span class="eyebrow">03 / Selected work</span>
-      <h2 class="section__title">Three problems worth explaining.</h2>
+      <h2 class="section__title">Four problems worth explaining.</h2>
       <p class="section__note">Every entry links to real source. One of them you can pip install.</p>
     </div>
 
@@ -354,6 +362,33 @@
       <li class="case">
         <div class="case__index">
           <span class="case__num">01</span>
+          <span class="tag tag--accent">Open source</span>
+        </div>
+        <div class="case__main">
+          <h3 class="case__title">Voice Agent Starter Kit <span class="case__org">Lythe Labs</span></h3>
+          <p class="case__summary">
+            A complete real-time voice loop &mdash; microphone to spoken reply &mdash; with the
+            latency work already done and the ASR, LLM and TTS providers left swappable.
+          </p>
+          <dl class="case__detail">
+            <div><dt>Role</dt><dd>Designed and shipped it. Pipeline, transport, adapters, telemetry.</dd></div>
+            <div><dt>Problem</dt><dd>A phone conversation tolerates about half a second of silence before it stops feeling like a conversation. Every new voice project was rebuilding the same latency-critical scaffolding to get there: audio transport, turn detection, streaming across three providers that each want to be awaited differently.</dd></div>
+            <div><dt>Approach</dt><dd>Stream everything. Audio moves over a WebSocket, the LLM emits text deltas, and TTS chunks start playing before the sentence is finished, so time-to-first-audio stops depending on total response length. Client-side VAD decides when the caller has actually stopped rather than waiting on a fixed timeout, the whole path stays async so no provider call can block another, and every stage is instrumented so a regression shows up as a number instead of a complaint.</dd></div>
+            <div><dt>Outcome</dt><dd>Open-sourced and Dockerised. New voice projects start from a working loop with a latency summary endpoint, instead of from an empty <code>main.py</code>.</dd></div>
+          </dl>
+          <ul class="stack"><li>FastAPI</li><li>WebSockets</li><li>Deepgram</li><li>Groq</li><li>Cartesia</li><li>VAD</li><li>asyncio</li><li>Docker</li></ul>
+          <div class="case__links">
+            <a class="link-out" href="https://github.com/lythelab/voice-agent-starter-kit" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source
+              <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="case">
+        <div class="case__index">
+          <span class="case__num">02</span>
           <span class="tag tag--accent">On PyPI</span>
         </div>
         <div class="case__main">
@@ -384,7 +419,7 @@
 
       <li class="case">
         <div class="case__index">
-          <span class="case__num">02</span>
+          <span class="case__num">03</span>
           <span class="tag tag--accent">Open source</span>
         </div>
         <div class="case__main">
@@ -411,7 +446,7 @@
 
       <li class="case">
         <div class="case__index">
-          <span class="case__num">03</span>
+          <span class="case__num">04</span>
           <span class="tag tag--accent">Open source</span>
         </div>
         <div class="case__main">
@@ -475,8 +510,8 @@
           <h3>Member of Technical Staff <span class="role__org">Lythe Labs</span></h3>
           <p>Building and shipping production voice agents, multi-agent systems, and the infrastructure that runs them: system design through deployment, solo, across a distributed remote team.</p>
           <ul class="bullets">
-            <li>Designed and shipped a production Voice Agent Starter Kit for natural phone-call-style LLM interactions, cutting voice agent integration time on new projects.</li>
-            <li>Built voice pipelines and tool-calling agent infrastructure, working from LLM integration through to telephony-side tooling.</li>
+            <li>Designed and shipped the open-source Voice Agent Starter Kit: a streaming ASR &rarr; LLM &rarr; TTS loop over WebSockets with client-side VAD and built-in latency telemetry, cutting voice agent integration time on new projects.</li>
+            <li>Built real-time voice pipelines and tool-calling agent infrastructure against a sub-500&nbsp;ms time-to-first-audio budget, keeping the whole path async so no provider call blocks another.</li>
             <li>Engineered a long-running autonomous agent supporting weeks of continuous runtime, using LLM planning, sandboxed execution, persistent memory, resumable sessions.</li>
             <li>Own CI/CD infrastructure with automated test integration, the AWS production stack, and MCP server development end-to-end.</li>
             <li>Maintain test plans for voice pipelines and agent systems; triage failures across telephony tooling and LLM integrations via Jira and Linear.</li>
@@ -657,8 +692,8 @@
     <div class="contact">
       <div class="contact__pitch">
         <p class="lead">
-          Open to full-time AI engineering roles and freelance work: voice agents, multi-agent
-          systems, RAG pipelines, and the cloud infrastructure to run them. Tell me what you're building.
+          Open to full-time AI engineering roles and freelance work: real-time voice agents, agent
+          infrastructure, RAG pipelines, and the cloud stack to run them. Tell me what you're building.
         </p>
         <a class="mailto" href="mailto:abdurrafay.tech@gmail.com">
           abdurrafay.tech@gmail.com
