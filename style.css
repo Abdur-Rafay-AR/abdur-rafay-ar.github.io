@@ -654,7 +654,7 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 
 .mini-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--s-4);
 }
 .mini {
@@ -672,6 +672,64 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 .mini h4 { font-size: 1.02rem; font-weight: 600; }
 .mini > p { font-size: .875rem; color: var(--text-2); flex: 1; }
 .mini .link-out { margin-top: auto; }
+
+/* ── 6c-2. Open Source Contributions ───────────────────────── */
+.contribs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-5);
+}
+.contrib {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding: var(--s-6);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  transition: border-color .22s var(--ease), transform .22s var(--ease);
+}
+.contrib:hover {
+  border-color: var(--line-bold);
+  transform: translateY(-2px);
+}
+.contrib__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  margin-bottom: var(--s-2);
+}
+.contrib__repo {
+  font-family: var(--mono);
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--accent-ink);
+}
+.contrib__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+}
+.contrib__summary {
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--text-2);
+  flex: 1;
+}
+.contrib__summary code {
+  font-family: var(--mono);
+  font-size: .85em;
+  padding: .15em .4em;
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--accent-ink);
+}
+.contrib__links {
+  margin-top: auto;
+  padding-top: var(--s-3);
+}
 
 /* ── 6d. Experience ────────────────────────────────────────── */
 .roles { display: grid; }
@@ -966,6 +1024,7 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
   .about, .skills { grid-template-columns: 1fr; }
   .skillset--wide { grid-row: auto; }
   .mini-grid { grid-template-columns: 1fr; }
+  .contribs { grid-template-columns: 1fr; }
   .section { padding: var(--s-8) 0; }
 }
 
@@ -974,6 +1033,7 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
   .case__index { flex-direction: row; align-items: center; gap: var(--s-4); }
   .case__num { font-size: 1.6rem; }
   .case__detail > div { grid-template-columns: 1fr; gap: .2rem; }
+  .contrib { padding: var(--s-5); }
   .role { grid-template-columns: 1fr; gap: var(--s-3); padding-left: var(--s-4); }
   .role__when { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: var(--s-3); }
   .cert { padding: var(--s-4); }
