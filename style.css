@@ -672,6 +672,7 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 .mini h4 { font-size: 1.02rem; font-weight: 600; }
 .mini > p { font-size: .875rem; color: var(--text-2); flex: 1; }
 .mini .link-out { margin-top: auto; }
+.mini__links { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: auto; }
 
 /* ── 6c-2. Open Source Contributions ───────────────────────── */
 .contribs {

@@ -181,9 +181,9 @@
 
         <p class="hero__lede">
           I'm Abdur Rafay, an AI Engineer based in Islamabad. I design and ship <strong>multi-agent systems and agent infrastructure</strong>:
-          autonomous planning loops, local time-travel debugging, persistent memory, and <strong>sub&#8209;800&nbsp;ms real-time voice pipelines</strong>.
+          autonomous planning loops, local time-travel debugging, persistent memory, and <strong>real-time voice pipelines</strong>.
           I own the CI/CD and cloud stack underneath them too.
-          <span class="hero__lede-sub">25+ agent systems delivered across healthcare, finance, cybersecurity &amp; education.</span>
+          <span class="hero__lede-sub">Author of Athar, Relay, and ai-cache on PyPI.</span>
         </p>
 
         <div class="hero__actions">
@@ -250,10 +250,9 @@
           telephony-side tooling.
         </p>
         <p>
-          Before this I delivered 25+ agent systems end-to-end across healthcare, finance,
-          cybersecurity and education, and built RAG pipelines in production. I'm completing a BS in
-          Artificial Intelligence at Bahria University (BUIC E-8) while conducting undergraduate research in multi-agent architectures,
-          and I publish the tools I need but can't find: Athar (a time-travel multi-agent debugger), an MCP latency auditor, a dependency-free agent framework, and an LLM cache.
+          Previously, I engineered multi-agent systems and production RAG pipelines across healthcare, finance,
+          cybersecurity and education. I'm completing a BS in Artificial Intelligence at Bahria University (BUIC E-8) while conducting undergraduate research in multi-agent architectures,
+          and I publish the tools I need but can't find: Athar (a time-travel multi-agent debugger), Relay (an MCP latency auditor), Crucible (a local multi-agent framework), and ai-cache.
         </p>
       </div>
 
@@ -355,7 +354,7 @@
     <div class="section__head">
       <span class="eyebrow">03 / Selected work</span>
       <h2 class="section__title">Four problems worth explaining.</h2>
-      <p class="section__note">Every entry links to real source. One of them you can pip install.</p>
+      <p class="section__note">Every entry links to real source, including three published packages on PyPI.</p>
     </div>
 
     <ol class="cases">
@@ -373,7 +372,7 @@
           <dl class="case__detail">
             <div><dt>Role</dt><dd>Author. Tracer SDK, dynamic replay runtime, local web UI, and LangChain/LangGraph adapters.</dd></div>
             <div><dt>Problem</dt><dd>Debugging multi-agent loops is slow and stochastic: when an agent fails on step 6 of 10, adding logs and re-running from scratch burns hundreds of thousands of tokens, wastes API credits, and risks non-deterministic divergence. Meanwhile, cloud observability platforms require sending private prompts and customer data to external vendors.</dd></div>
-            <div><dt>Approach</dt><dd>Record execution DAGs, prompts, tool calls, and state snapshots locally using SQLite Write-Ahead Logging (WAL) and deterministic SHA-256 state hashing. When an agent goes off track, developers scrub through the visual execution timeline in the local web UI, mutate the prompt, state, or tool output at the exact failure node, and trigger replay—resuming downstream execution without re-running prior nodes.</dd></div>
+            <div><dt>Approach</dt><dd>Record execution DAGs, prompts, tool calls, and state snapshots locally using SQLite Write-Ahead Logging (WAL) and deterministic SHA-256 state hashing. When an agent goes off track, developers scrub through the visual execution timeline in the local web UI, mutate the prompt, state, or tool output at the exact failure node, and trigger replay to resume downstream execution without re-running prior nodes.</dd></div>
             <div><dt>Outcome</dt><dd>Published to PyPI as <code>athar</code>. Zero cloud fees, zero vendor lock-in, and instant side-by-side branch diffing comparing token latency, API costs, and execution paths.</dd></div>
           </dl>
           <ul class="stack"><li>Python</li><li>FastAPI</li><li>SQLite WAL</li><li>LangChain</li><li>LangGraph</li><li>PyPI</li></ul>
@@ -485,10 +484,19 @@
         <a class="link-out" href="https://github.com/lythelab/agent-testing-suite" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
       </li>
       <li class="mini">
-        <div class="mini__head"><h4>ai-cache</h4><span class="tag">Open source</span></div>
-        <p>Automatic caching of LLM responses across OpenAI, Anthropic and Gemini behind one interface. Repeat calls resolve locally, cutting spend and latency on repeated NLP queries.</p>
-        <ul class="stack"><li>Python</li><li>OpenAI</li><li>Anthropic</li><li>Gemini</li></ul>
-        <a class="link-out" href="https://github.com/Abdur-Rafay-AR/ai-cache" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source<svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg></a>
+        <div class="mini__head"><h4>ai-cache</h4><span class="tag tag--accent">On PyPI</span></div>
+        <p>Transparent local caching of LLM responses across OpenAI, Anthropic and Gemini. Intercepts calls to resolve repeated queries locally via SQLite, reducing token costs and test latency.</p>
+        <ul class="stack"><li>Python</li><li>SQLite</li><li>PyPI</li></ul>
+        <div class="mini__links">
+          <a class="link-out" href="https://github.com/Abdur-Rafay-AR/ai-cache" target="_blank" rel="noopener">
+            <svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>Source
+            <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg>
+          </a>
+          <a class="link-out" href="https://pypi.org/project/ai-cache/" target="_blank" rel="noopener">
+            <svg class="ico" aria-hidden="true"><use href="#i-package"/></svg>ai-cache
+            <svg class="ico ico--sm" aria-hidden="true"><use href="#i-diagonal"/></svg>
+          </a>
+        </div>
       </li>
       <li class="mini">
         <div class="mini__head"><h4>Long-Running Agent</h4><span class="tag">Open source</span></div>
@@ -589,7 +597,7 @@
           <p>Built and shipped production voice agents, multi-agent systems, and the infrastructure that ran them: system design through deployment, solo, across a distributed remote team.</p>
           <ul class="bullets">
             <li>Designed and shipped the open-source Voice Agent Starter Kit: a streaming ASR &rarr; LLM &rarr; TTS loop over WebSockets with client-side VAD, barge-in and built-in latency telemetry, cutting voice agent integration time on new projects.</li>
-            <li>Built real-time voice pipelines and tool-calling agent infrastructure against a sub-800&nbsp;ms time-to-first-audio budget, keeping the whole path async so no provider call blocks another.</li>
+            <li>Built real-time streaming voice pipelines and tool-calling agent infrastructure, keeping the whole path async so no provider call blocks another.</li>
             <li>Engineered a long-running autonomous agent supporting weeks of continuous runtime, using LLM planning, sandboxed execution, persistent memory, resumable sessions.</li>
             <li>Owned CI/CD infrastructure with automated test integration, the AWS production stack, and MCP server development end-to-end.</li>
             <li>Maintained test plans for voice pipelines and agent systems; triaged failures across telephony tooling and LLM integrations via Jira and Linear.</li>
@@ -602,11 +610,11 @@
         <div class="role__when"><span class="role__date">Jan - Mar 2026</span><span class="role__place">Georgia, USA · Remote</span></div>
         <div class="role__what">
           <h3>AI Intern <span class="role__org">School of AI</span></h3>
-          <p>Delivered 25+ AI agent systems independently across healthcare, finance, cybersecurity and education, each end-to-end with minimal supervision.</p>
+          <p>Delivered AI agent systems independently across healthcare, finance, cybersecurity and education, each end-to-end with minimal supervision.</p>
           <ul class="bullets">
-            <li>Built full-stack multi-agent platforms with persistent memory, voice control, workflow automation and document analysis, cutting manual document processing time by an estimated 70% in pilot tests.</li>
+            <li>Built full-stack multi-agent platforms with persistent memory, voice control, workflow automation and document analysis.</li>
             <li>Implemented agent-to-agent communication, context-aware task coordination and structured LLM outputs in LangChain.</li>
-            <li>Shipped a medical note structurer (100% of unformatted clinical notes converted to standard templates), an earnings call analyzer, an incident response assistant, an AI tutoring platform and a collaborative document analyzer.</li>
+            <li>Shipped a medical note structurer for clinical templates, an earnings call analyzer, an incident response assistant, an AI tutoring platform and a collaborative document analyzer.</li>
             <li>Reported system designs and progress weekly to cross-functional leads across three time zones.</li>
           </ul>
           <ul class="stack"><li>LangChain</li><li>Multi-agent</li><li>Python</li></ul>
@@ -619,7 +627,7 @@
           <h3>AI Intern <span class="role__org">AABS</span></h3>
           <p>Built and optimised production RAG pipelines on Groq and ChromaDB, holding low latency at scale without losing retrieval accuracy.</p>
           <ul class="bullets">
-            <li>Improved retrieval precision by 40% through embedding pipeline tuning and relevance optimisation.</li>
+            <li>Optimised retrieval precision through embedding pipeline tuning, chunking strategies, and relevance scoring.</li>
             <li>Developed PDF chatbots and memory-augmented conversational agents; integrated PostgreSQL for session and metadata storage in multi-agent MLOps workflows.</li>
             <li>Applied user-intent classification and multi-agent orchestration to route queries accurately, reducing irrelevant LLM responses.</li>
           </ul>
@@ -658,7 +666,7 @@
           <h3>Data Science Intern <span class="role__org">Securely Innovations</span></h3>
           <p>Data work and QA for a security analytics team.</p>
           <ul class="bullets">
-            <li>Preprocessed large structured and unstructured datasets in Pandas, NumPy and SQL; automated reporting workflows that cut manual processing time by 30%.</li>
+            <li>Preprocessed large structured and unstructured datasets in Pandas, NumPy and SQL; automated reporting workflows to streamline analytics pipelines.</li>
             <li>Applied statistical modelling and data mining to surface actionable patterns for analysts.</li>
             <li>Ran functional, regression and mobile-responsiveness QA across the company's main web platform, tracking defects in Jira.</li>
           </ul>
